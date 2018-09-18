@@ -11,6 +11,7 @@ namespace Sokoban_M3
 
         static void Main(string[] args)
         {
+            Controller.MainController mc = new Controller.MainController();
         }
     }
 }

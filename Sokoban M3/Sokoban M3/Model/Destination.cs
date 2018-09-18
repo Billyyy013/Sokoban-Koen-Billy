@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sokoban_M3.Model
 {
-    class Destination
+    class Destination : Tile
     {
+        public Destination()
+        {
+            Symbol = 'x';
+        }
     }
 }

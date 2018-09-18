@@ -8,5 +8,6 @@ namespace Sokoban_M3.Model
 {
     class Tile
     {
+        protected char Symbol { get; set; } 
     }
 }

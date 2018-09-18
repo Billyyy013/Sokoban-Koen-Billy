@@ -8,5 +8,8 @@ namespace Sokoban_M3.Model
 {
     class Forklift
     {
+        public Forklift()
+        {
+        }
     }
 }

@@ -8,5 +8,12 @@ namespace Sokoban_M3.Controller
 {
     class MainController
     {
+        Model.Maze maze;
+        View.MainView mainView;
+        public MainController()
+        {
+            maze = new Model.Maze();
+            mainView = new View.MainView();
+        }
     }
 }
