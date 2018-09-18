@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Sokoban_M3.Model
 {
-    class Floor
+    class Floor : Tile
     {
+        public Floor()
+        {
+            Symbol = '·';
+        }
     }
 }
+            
