@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sokoban_M3
+namespace Sokoban_M3.View
 {
-    class Program
+    class MainView
     {
-
-        static void Main(string[] args)
-        {
-        }
     }
 }
