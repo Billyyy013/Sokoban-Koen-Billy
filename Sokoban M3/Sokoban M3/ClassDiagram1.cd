@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Destination">
-    <Position X="8.5" Y="3" Width="1.5" />
+    <Position X="8.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Destination.cs</FileName>
@@ -47,12 +47,19 @@
   <Class Name="Sokoban_M3.Model.Tile">
     <Position X="11.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Wall">
-    <Position X="8.5" Y="4.5" Width="1.5" />
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
+      <Path>
+        <Point X="12" Y="4.103" />
+        <Point X="12" Y="5.438" />
+        <Point X="10" Y="5.438" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Wall.cs</FileName>
@@ -72,7 +79,7 @@
   <Class Name="Sokoban_M3.View.MainView">
     <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\MainView.cs</FileName>
     </TypeIdentifier>
   </Class>
