@@ -8,8 +8,11 @@ namespace Sokoban_M3.View
 {
     class MainView
     {
-
-        public void printGame()
+        public MainView()
+        {
+            PrintGame();
+        }
+        public void PrintGame()
         {
             Console.WriteLine("┌─────────────────────────────────────────────────────────┐");
             Console.WriteLine("| Welkom bij Sokoban                                      |");
