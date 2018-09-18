@@ -18,5 +18,10 @@ namespace Sokoban_M3.Model
         {
 
         }
+
+        public void LoadLevel(int level)
+        {
+
+        }
     }
 }
