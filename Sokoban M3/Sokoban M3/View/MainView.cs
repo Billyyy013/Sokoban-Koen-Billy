@@ -27,6 +27,8 @@ namespace Sokoban_M3.View
             Console.WriteLine("|      x : bestemming          |                          |");
             Console.WriteLine("|      @ : truck               |                          |");
             Console.WriteLine("└─────────────────────────────────────────────────────────┘");
+            Console.WriteLine();
+            Console.WriteLine("> Kies een doolhof (1 - 4), s = stop");
             Console.ReadLine();
         }
     }
