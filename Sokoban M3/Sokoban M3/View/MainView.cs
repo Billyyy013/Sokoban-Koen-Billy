@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ namespace Sokoban_M3.View
         public MainView()
         {
             PrintGame();
+            PrintField();
         }
         public void PrintGame()
         {
@@ -29,7 +31,19 @@ namespace Sokoban_M3.View
             Console.WriteLine("└─────────────────────────────────────────────────────────┘");
             Console.WriteLine();
             Console.WriteLine("> Kies een doolhof (1 - 4), s = stop");
+
+        }
+
+        public void PrintField()
+        {
+            string text = System.IO.File.ReadAllText(@"C:\Users\Billy\Desktop\School\Doolhof\doolhof2.txt");
+
+
+            System.Console.WriteLine(text);
             Console.ReadLine();
         }
+
+
+
     }
 }
