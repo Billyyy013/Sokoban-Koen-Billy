@@ -10,7 +10,7 @@ namespace Sokoban_M3.Model
     {
         public Wall()
         {
-            Symbol = '#';
+            Symbol = '█';
         }
     }
 }

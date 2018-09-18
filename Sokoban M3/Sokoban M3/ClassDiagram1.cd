@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Destination">
-    <Position X="8.5" Y="3" Width="1.5" />
+    <Position X="8.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Destination.cs</FileName>
@@ -52,7 +52,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Wall">
-    <Position X="8.5" Y="4.5" Width="1.5" />
+    <Position X="8.5" Y="4.75" Width="1.5" />
+    <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
+      <Path>
+        <Point X="12" Y="4.103" />
+        <Point X="12" Y="5.438" />
+        <Point X="10" Y="5.438" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Wall - Copy.cs</FileName>
