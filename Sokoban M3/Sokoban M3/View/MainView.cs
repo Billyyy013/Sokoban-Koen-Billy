@@ -12,7 +12,7 @@ namespace Sokoban_M3.View
         public MainView()
         {
             PrintGame();
-            PrintField();
+            PrintField(RetrieveMazeNumber());
         }
         public void PrintGame()
         {
@@ -34,15 +34,21 @@ namespace Sokoban_M3.View
 
         }
 
-        public void PrintField()
+        public void PrintField(int maze)
         {
-            string text = System.IO.File.ReadAllText(@"C:\Users\Billy\Desktop\School\Doolhof\doolhof2.txt");
+            string text = System.IO.File.ReadAllText(@"C:\Users\Billy\Desktop\School\Doolhof\doolhof" + maze + ".txt");
 
 
             System.Console.WriteLine(text);
             Console.ReadLine();
         }
 
+        public int RetrieveMazeNumber()
+        {
+            int intTemp = Convert.ToInt32(Console.ReadLine());
+
+            return intTemp;
+        }
 
 
     }
