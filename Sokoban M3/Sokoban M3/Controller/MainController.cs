@@ -35,15 +35,31 @@ namespace Sokoban_M3.Controller
                     {
                         case ConsoleKey.UpArrow:
                             Console.WriteLine("up");
+                            if (parser.maze.checkIfUpPossible())
+                            {
+                                moveUp();
+                            }
                             break;
                         case ConsoleKey.DownArrow:
                             Console.WriteLine("down");
+                            if (parser.maze.checkIfDownPossible())
+                            {
+                                moveDown();
+                            }
                             break;
                         case ConsoleKey.LeftArrow:
                             Console.WriteLine("left");
+                            if (parser.maze.checkIfLeftPossible())
+                            {
+                                moveLeft();
+                            }
                             break;
                         case ConsoleKey.RightArrow:
                             Console.WriteLine("right");
+                            if (parser.maze.checkIfRightPossible())
+                            {
+                                moveRight();
+                            }
                             break;
                     }
                 } else
@@ -53,5 +69,17 @@ namespace Sokoban_M3.Controller
             }
         }
 
+        public void moveUp()
+        {
+        }
+        public void moveDown()
+        {
+        }
+        public void moveLeft()
+        {
+        }
+        public void moveRight()
+        {
+        }
     }
 }

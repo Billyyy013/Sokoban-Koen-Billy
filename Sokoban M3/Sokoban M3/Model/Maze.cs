@@ -44,6 +44,26 @@ namespace Sokoban_M3.Model
             }
         }
 
+        public bool checkIfUpPossible()
+        {
+            return true;
+        }
+
+        public bool checkIfDownPossible()
+        {
+            return true;
+        }
+
+        public bool checkIfLeftPossible()
+        {
+            return true;
+        }
+
+        public bool checkIfRightPossible()
+        {
+            return true;
+        }
+
         public void printMaze()
         {
             for (int i = 0; i < height; i++)
