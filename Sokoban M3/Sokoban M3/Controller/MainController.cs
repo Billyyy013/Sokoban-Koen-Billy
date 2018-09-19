@@ -26,20 +26,29 @@ namespace Sokoban_M3.Controller
         {
             Console.WriteLine("Gebruik een pijltjes toets.");
             ConsoleKey key = Console.ReadKey().Key;
-            switch (key)
+            while (true)
             {
-                case ConsoleKey.UpArrow:
-                    Console.WriteLine("up");
-                    break;
-                case ConsoleKey.DownArrow:
-                    Console.WriteLine("down");
-                    break;
-                case ConsoleKey.LeftArrow:
-                    Console.WriteLine("left");
-                    break;
-                case ConsoleKey.RightArrow:
-                    Console.WriteLine("right");
-                    break;
+                if (key == ConsoleKey.UpArrow || key == ConsoleKey.DownArrow || key == ConsoleKey.LeftArrow || key == ConsoleKey.RightArrow)
+                {
+                    switch (key)
+                    {
+                        case ConsoleKey.UpArrow:
+                            Console.WriteLine("up");
+                            break;
+                        case ConsoleKey.DownArrow:
+                            Console.WriteLine("down");
+                            break;
+                        case ConsoleKey.LeftArrow:
+                            Console.WriteLine("left");
+                            break;
+                        case ConsoleKey.RightArrow:
+                            Console.WriteLine("right");
+                            break;
+                    }
+                } else
+                {
+                    Console.WriteLine("Geen valide input");
+                }
             }
         }
 
