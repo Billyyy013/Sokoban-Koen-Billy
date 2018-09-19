@@ -13,6 +13,7 @@ namespace Sokoban_M3.Model
         Floor[] floors;
         Wall[] walls;
         Chest[] chests;
+        EmptyTile[] emptyTiles;
         
         public Maze()
         {

@@ -16,6 +16,13 @@
   </Class>
   <Class Name="Sokoban_M3.Model.Floor">
     <Position X="8.5" Y="1.75" Width="1.5" />
+    <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
+      <Path>
+        <Point X="12" Y="3" />
+        <Point X="12" Y="2.375" />
+        <Point X="10" Y="2.375" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Floor.cs</FileName>
@@ -31,7 +38,7 @@
   <Class Name="Sokoban_M3.Model.Maze">
     <Position X="5.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAAAAAAIAQAAAAAAAAAAAIAABAAAAAA=</HashCode>
+      <HashCode>AAAAAABAAAAAAAAAAAAIAQAEAAAAAAAAAIAABAIAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -42,6 +49,7 @@
       <Field Name="floors" />
       <Field Name="walls" />
       <Field Name="chests" />
+      <Field Name="emptyTiles" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Sokoban_M3.Model.Tile">
@@ -62,11 +70,11 @@
     </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Wall - Copy.cs</FileName>
+      <FileName>Model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Controller.MainController">
-    <Position X="5.75" Y="2" Width="1.5" />
+    <Position X="5.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\MainController.cs</FileName>
@@ -79,7 +87,7 @@
   <Class Name="Sokoban_M3.View.MainView">
     <Position X="5.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
       <FileName>View\MainView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -88,6 +96,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban_M3.Model.EmptyTile">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
+      <Path>
+        <Point X="12" Y="4.103" />
+        <Point X="12" Y="6.938" />
+        <Point X="10" Y="6.938" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\EmptyTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
