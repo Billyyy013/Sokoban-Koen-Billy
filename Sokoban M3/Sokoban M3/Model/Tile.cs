@@ -18,7 +18,7 @@ namespace Sokoban_M3.Model
 
         public void obtainBarrel()
         {
-            displaySymbol = 'o';
+            displaySymbol = 'O';
         }
 
         public void loseBarrel()
