@@ -8,12 +8,12 @@ namespace Sokoban_M3.Model
 {
     class Maze
     {
-        Forklift forklift;
-        Destination[] destinations;
-        Floor[] floors;
-        Wall[] walls;
-        Chest[] chests;
-        EmptyTile[] emptyTiles;
+        private Forklift forklift;
+        private Destination[] destinations;
+        private Floor[] floors;
+        private Wall[] walls;
+        private Chest[] chests;
+        private EmptyTile[] emptyTiles;
         
         public Maze()
         {

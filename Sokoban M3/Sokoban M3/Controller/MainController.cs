@@ -8,12 +8,14 @@ namespace Sokoban_M3.Controller
 {
     class MainController
     {
-        Model.Maze maze;
-        View.MainView mainView;
+        private View.OutputView outputView;
+        private View.InputView inputView;
+        private Parser parser;
         public MainController()
         {
-            maze = new Model.Maze();
-            mainView = new View.MainView();
+            outputView = new View.OutputView();
+            inputView = new View.InputView();
+            parser = new Parser();
         }
     }
 }

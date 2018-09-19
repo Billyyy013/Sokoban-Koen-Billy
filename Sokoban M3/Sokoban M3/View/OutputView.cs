@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Sokoban_M3.View
 {
-    class MainView
+    class OutputView
     {
-        public MainView()
+        public OutputView()
         {
             PrintGame();
             PrintField(RetrieveMazeNumber());
