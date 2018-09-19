@@ -21,6 +21,11 @@ namespace Sokoban_M3.Controller
             Console.ReadLine();
         }
 
+        public void MoveArrows()
+        {
+            string key = Console.ReadKey().Key.ToString();
+            
+        }
 
     }
 }
