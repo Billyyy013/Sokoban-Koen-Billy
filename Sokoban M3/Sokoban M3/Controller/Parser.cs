@@ -60,7 +60,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case 'o':
                             maze.tiles[i, j] = new Floor();
-                            maze.tiles[i, j].getBarrel();
+                            maze.tiles[i, j].obtainBarrel();
                             break;
                     }
                         

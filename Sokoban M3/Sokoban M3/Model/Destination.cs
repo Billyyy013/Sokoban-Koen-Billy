@@ -13,5 +13,10 @@ namespace Sokoban_M3.Model
             ownSymbol = 'x';
             displaySymbol = ownSymbol;
         }
+
+        public void obtainBarrel()
+        {
+            displaySymbol = '0';
+        }
     }
 }
