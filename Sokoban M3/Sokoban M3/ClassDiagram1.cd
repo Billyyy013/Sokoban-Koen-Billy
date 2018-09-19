@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Sokoban_M3.Model.Chest">
-    <Position X="3.25" Y="4.5" Width="1.5" />
+    <Position X="5.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Chest.cs</FileName>
@@ -18,7 +18,7 @@
     <Position X="8.5" Y="1.75" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
       <Path>
-        <Point X="12" Y="3" />
+        <Point X="12" Y="3.25" />
         <Point X="12" Y="2.375" />
         <Point X="10" Y="2.375" />
       </Path>
@@ -29,7 +29,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Forklift">
-    <Position X="3.25" Y="3" Width="1.5" />
+    <Position X="3.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Forklift.cs</FileName>
@@ -43,15 +43,18 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="forklift" />
+      <Property Name="tiles" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Field Name="destinations" />
-      <Field Name="walls" />
       <Field Name="chests" />
+      <Field Name="destinations" />
+      <Field Name="emptyTiles" />
+      <Field Name="floors" />
+      <Field Name="walls" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Sokoban_M3.Model.Tile">
-    <Position X="11.25" Y="3" Width="1.5" />
+    <Position X="11.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAAAABAQgAAAAAAAAAAAAAAAAAAAAAAABAAAEAAAAA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
@@ -61,9 +64,7 @@
     <Position X="8.5" Y="4.75" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
       <Path>
-        <Point X="11.25" Y="4.627" />
-        <Point X="10.875" Y="4.627" />
-        <Point X="10.875" Y="5.438" />
+        <Point X="11.25" Y="5.438" />
         <Point X="10" Y="5.438" />
       </Path>
     </InheritanceLine>
@@ -80,17 +81,19 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="outputView" />
+      <Field Name="inputView" />
+      <Field Name="parser" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban_M3.View.OutputView">
-    <Position X="5.75" Y="0.5" Width="1.5" />
+    <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAEAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Program">
-    <Position X="3.25" Y="1.5" Width="1.5" />
+    <Position X="1.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
@@ -100,7 +103,7 @@
     <Position X="8.5" Y="6.25" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
       <Path>
-        <Point X="12" Y="5.324" />
+        <Point X="12" Y="5.574" />
         <Point X="12" Y="6.938" />
         <Point X="10" Y="6.938" />
       </Path>
@@ -108,6 +111,23 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\EmptyTile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban_M3.Controller.Parser">
+    <Position X="3.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Controller\Parser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="maze" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban_M3.View.InputView">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
