@@ -24,10 +24,11 @@ namespace Sokoban_M3.Controller
 
         public void MoveArrows()
         {
-            Console.WriteLine("Gebruik een pijltjes toets.");
-            ConsoleKey key = Console.ReadKey().Key;
+            Console.WriteLine("Gebruik de pijltjes toetsen.");
+            
             while (true)
             {
+                ConsoleKey key = Console.ReadKey().Key;
                 if (key == ConsoleKey.UpArrow || key == ConsoleKey.DownArrow || key == ConsoleKey.LeftArrow || key == ConsoleKey.RightArrow)
                 {
                     switch (key)
