@@ -8,6 +8,8 @@ namespace Sokoban_M3.Model
 {
     class Forklift
     {
+        public int xLoc { get; set;}
+        public int yLoc { get; set;}
         public Forklift()
         {
         }

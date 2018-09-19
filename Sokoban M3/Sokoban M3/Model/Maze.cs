@@ -8,7 +8,8 @@ namespace Sokoban_M3.Model
 {
     class Maze
     {
-        private Forklift forklift;
+        public Forklift forklift { get; set;}
+        
         private Destination[] destinations;
         private Floor[] floors;
         private Wall[] walls;

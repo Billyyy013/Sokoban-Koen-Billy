@@ -54,6 +54,8 @@ namespace Sokoban_M3.Controller
                         case '@':
                             maze.tiles[i, j] = new Floor();
                             maze.tiles[i, j].getTruck();
+                            maze.forklift.xLoc = i;
+                            maze.forklift.yLoc = j;
                             break;
                         case 'x':
                             maze.tiles[i, j] = new Destination();
