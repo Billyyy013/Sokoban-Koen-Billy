@@ -18,13 +18,29 @@ namespace Sokoban_M3.Controller
             inputView = new View.InputView();
             parser = new Parser();
             parser.buildMaze(outputView.RetrieveMazeNumber());
+            MoveArrows();
             Console.ReadLine();
         }
 
         public void MoveArrows()
         {
-            string key = Console.ReadKey().Key.ToString();
-            
+            Console.WriteLine("Gebruik een pijltjes toets.");
+            ConsoleKey key = Console.ReadKey().Key;
+            switch (key)
+            {
+                case ConsoleKey.UpArrow:
+                    Console.WriteLine("up");
+                    break;
+                case ConsoleKey.DownArrow:
+                    Console.WriteLine("down");
+                    break;
+                case ConsoleKey.LeftArrow:
+                    Console.WriteLine("left");
+                    break;
+                case ConsoleKey.RightArrow:
+                    Console.WriteLine("right");
+                    break;
+            }
         }
 
     }
