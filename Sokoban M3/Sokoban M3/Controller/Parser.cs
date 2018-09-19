@@ -69,7 +69,6 @@ namespace Sokoban_M3.Controller
             }
             maze.printMaze();
             maze.setRelativeTo();
-            Console.ReadLine();
         }
     }
 }

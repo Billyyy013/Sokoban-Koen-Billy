@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Sokoban_M3.Controller
 {
     class MainController
@@ -17,7 +18,9 @@ namespace Sokoban_M3.Controller
             inputView = new View.InputView();
             parser = new Parser();
             parser.buildMaze(outputView.RetrieveMazeNumber());
-
+            Console.ReadLine();
         }
+
+
     }
 }
