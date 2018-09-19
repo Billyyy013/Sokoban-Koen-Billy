@@ -60,10 +60,18 @@
     <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Mazes\doolhof1.txt" />
-    <Content Include="Mazes\doolhof2.txt" />
-    <Content Include="Mazes\doolhof3.txt" />
-    <Content Include="Mazes\doolhof4.txt" />
+    <Content Include="Mazes\doolhof1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mazes\doolhof2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mazes\doolhof3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mazes\doolhof4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
