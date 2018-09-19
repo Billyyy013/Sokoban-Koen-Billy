@@ -16,7 +16,7 @@ namespace Sokoban_M3.Model
         public Tile left { get; set;}
         public Tile right { get; set;}
 
-        public void getBarrel()
+        public void obtainBarrel()
         {
             displaySymbol = 'o';
         }
