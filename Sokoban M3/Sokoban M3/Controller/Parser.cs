@@ -53,7 +53,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case '@':
                             maze.tiles[i, j] = new Floor();
-                            maze.tiles[i, j].getTruck();
+                            maze.tiles[i, j].obtainTruck();
                             maze.forklift.xLoc = i;
                             maze.forklift.yLoc = j;
                             break;

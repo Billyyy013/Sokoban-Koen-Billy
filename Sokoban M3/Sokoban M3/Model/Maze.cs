@@ -8,8 +8,8 @@ namespace Sokoban_M3.Model
 {
     class Maze
     {
-        public Forklift forklift { get; set;}
-        
+        public Forklift forklift { get; set; }
+
         private Destination[] destinations;
         private Floor[] floors;
         private Wall[] walls;
@@ -19,10 +19,11 @@ namespace Sokoban_M3.Model
 
         private int height;
         private int width;
-        
+
         public Maze(int height, int width)
         {
-            tiles = new Tile[height,width];
+            forklift = new Forklift();
+            tiles = new Tile[height, width];
             this.height = height;
             this.width = width;
         }
@@ -31,21 +32,56 @@ namespace Sokoban_M3.Model
         {
             for (int i = 1; i < height; i++)
             {
-                for (int j = 1; j < width;j++)
+                for (int j = 1; j < width; j++)
                 {
-                    if (tiles[i, j].ownSymbol.Equals('o')|| tiles[i, j].ownSymbol.Equals('·'))
+                    if (tiles[i, j].ownSymbol.Equals('o') || tiles[i, j].ownSymbol.Equals('·'))
                     {
-                        tiles[i, j].above = tiles[i-1, j];
+                        tiles[i, j].above = tiles[i - 1, j];
                         tiles[i, j].below = tiles[i + 1, j];
-                        tiles[i, j].left = tiles[i, j-1];
-                        tiles[i, j].right = tiles[i, j+1];
+                        tiles[i, j].left = tiles[i, j - 1];
+                        tiles[i, j].right = tiles[i, j + 1];
                     }
                 }
             }
         }
-
+         //█ · O 0 x @
         public bool checkIfUpPossible()
         {
+            int x = forklift.xLoc;
+            int y = forklift.yLoc;
+            if (tiles[x - 1, y].displaySymbol.Equals('█'))
+            {
+                return false;
+            }
+            if (tiles[x - 1, y].displaySymbol.Equals('O')&& tiles[x - 2, y].displaySymbol.Equals('█'))
+            {
+                return false;
+            }
+
+            if (tiles[x - 1, y].displaySymbol.Equals('0') && tiles[x - 2, y].displaySymbol.Equals('█'))
+            {
+                return false;
+            }
+
+            if (tiles[x - 1, y].displaySymbol.Equals('O') && tiles[x - 2, y].displaySymbol.Equals('0'))
+            {
+                return false;
+            }
+
+            if (tiles[x - 1, y].displaySymbol.Equals('0') && tiles[x - 2, y].displaySymbol.Equals('O'))
+            {
+                return false;
+            }
+
+            if (tiles[x - 1, y].displaySymbol.Equals('O') && tiles[x - 2, y].displaySymbol.Equals('O'))
+            {
+                return false;
+            }
+
+            if (tiles[x - 1, y].displaySymbol.Equals('0') && tiles[x - 2, y].displaySymbol.Equals('0'))
+            {
+                return false;
+            }
             return true;
         }
 
@@ -68,7 +104,7 @@ namespace Sokoban_M3.Model
         {
             for (int i = 0; i < height; i++)
             {
-                for(int j = 0; j < width; j++)
+                for (int j = 0; j < width; j++)
                 {
                     Console.Write(tiles[i, j].displaySymbol);
                 }

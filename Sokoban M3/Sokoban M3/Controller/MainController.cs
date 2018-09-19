@@ -39,6 +39,7 @@ namespace Sokoban_M3.Controller
                             {
                                 moveUp();
                             }
+                            parser.maze.printMaze();
                             break;
                         case ConsoleKey.DownArrow:
                             Console.WriteLine("down");
@@ -71,6 +72,18 @@ namespace Sokoban_M3.Controller
 
         public void moveUp()
         {
+            Model.Tile[,] tiles = parser.maze.tiles;
+            int x = parser.maze.forklift.xLoc;
+            int y = parser.maze.forklift.yLoc;
+            if (tiles[x - 1, y].Equals('0')|| tiles[x - 1, y].Equals('O'))
+            {
+                tiles[x - 1, y].loseBarrel();
+                tiles[x - 2, y].obtainBarrel();
+            }
+            tiles[x, y].loseTruck();
+            tiles[x-1, y].obtainTruck();
+
+            parser.maze.forklift.xLoc = x - 1;
         }
         public void moveDown()
         {

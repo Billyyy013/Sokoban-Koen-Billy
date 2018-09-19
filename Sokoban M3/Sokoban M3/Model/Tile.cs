@@ -26,7 +26,7 @@ namespace Sokoban_M3.Model
             displaySymbol = ownSymbol;
         }
 
-        public void getTruck()
+        public void obtainTruck()
         {
             displaySymbol = '@';
         }

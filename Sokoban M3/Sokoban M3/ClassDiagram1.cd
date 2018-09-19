@@ -38,7 +38,7 @@
   <Class Name="Sokoban_M3.Model.Maze">
     <Position X="5.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAABAAAAAAAQAQAAIAQAAAgAAAAAAAIIABAIAAAA=</HashCode>
+      <HashCode>AQAAAABAAAAAAAQAQAAIAQAAAhAAAQAAAIIABEIAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -55,7 +55,7 @@
   <Class Name="Sokoban_M3.Model.Tile">
     <Position X="11.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>JAAIAABAQgAAAAAAAAAAAAAAAAAIAAAQABAAAAAAgAA=</HashCode>
+      <HashCode>JAAIAAAAQgAAAAAAAAAAAAAAAAAIAAAQABACAAAAgAA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -75,7 +75,7 @@
   <Class Name="Sokoban_M3.Controller.MainController">
     <Position X="5.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAABAAQAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAAACAAABAAQAAAAACEAAIAA=</HashCode>
       <FileName>Controller\MainController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
