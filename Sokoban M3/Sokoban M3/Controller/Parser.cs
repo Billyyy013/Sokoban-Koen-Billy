@@ -13,7 +13,6 @@ namespace Sokoban_M3.Controller
         public Model.Maze maze { get; set; }
         public Parser()
         {
-            //maze = new Model.Maze();
         }
 
         public void buildMaze(int mazeNumber)

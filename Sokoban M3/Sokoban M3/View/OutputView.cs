@@ -13,7 +13,6 @@ namespace Sokoban_M3.View
         public OutputView()
         {
             PrintGame();
-            PrintField(RetrieveMazeNumber());
         }
         public void PrintGame()
         {
@@ -33,33 +32,6 @@ namespace Sokoban_M3.View
             Console.WriteLine();
             Console.WriteLine("> Kies een doolhof (1 - 4), s = stop");
 
-        }
-
-        public void PrintField(int maze)
-        {
-            //string text = System.IO.File.ReadAllText("C:\\doolhof" + maze + ".txt");
-            //string text = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"Mazes\doolhof" + maze + ".txt");
-            //string[] files = File.ReadAllLines(text);
-
-            string _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
-            _filePath = Directory.GetParent(_filePath).FullName;
-            _filePath = Directory.GetParent(Directory.GetParent(_filePath).FullName).FullName;
-            _filePath += @"\Sokoban M3\Mazes\doolhof" + maze + ".txt";
-            TextReader tr = new StreamReader(_filePath);
-
-            string line;
-            List<string> list = new List<string>();
-
-            
-            while ((line = tr.ReadLine()) != null)
-            {
-                list.Add(line);
-                System.Console.WriteLine(line);
-
-            }
-
-            Console.ReadLine();
-            
         }
 
         public int RetrieveMazeNumber()

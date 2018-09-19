@@ -36,7 +36,6 @@ namespace Sokoban_M3.Model
                 }
                 Console.WriteLine();
             }
-            Console.ReadLine();
         }
     }
 }
