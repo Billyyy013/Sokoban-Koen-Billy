@@ -38,7 +38,7 @@
   <Class Name="Sokoban_M3.Model.Maze">
     <Position X="5.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAQAQAAIAQAAAgAAAAAAAIIABAIAAAA=</HashCode>
+      <HashCode>AQAAAABAAAAAAAQAQAAIAQAAAgAAAAAAAIIABAIAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -56,7 +56,7 @@
   <Class Name="Sokoban_M3.Model.Tile">
     <Position X="11.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAAAAABAQgAAAAAAAAAAAAAAAAAAAAAAABAAAEAAAAA=</HashCode>
+      <HashCode>JAAAAABAQgAAAAAAAAAAAAAAAAAIAAAQABAAAEAAgAA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -103,7 +103,7 @@
     <Position X="8.5" Y="6.25" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
       <Path>
-        <Point X="12" Y="5.574" />
+        <Point X="12" Y="6.344" />
         <Point X="12" Y="6.938" />
         <Point X="10" Y="6.938" />
       </Path>

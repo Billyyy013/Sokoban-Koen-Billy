@@ -26,6 +26,23 @@ namespace Sokoban_M3.Model
             this.width = width;
         }
 
+        public void setRelativeTo()
+        {
+            for (int i = 1; i < height; i++)
+            {
+                for (int j = 1; j < width;j++)
+                {
+                    if (tiles[i, j].ownSymbol.Equals('o')|| tiles[i, j].ownSymbol.Equals('·'))
+                    {
+                        tiles[i, j].above = tiles[i-1, j];
+                        tiles[i, j].below = tiles[i + 1, j];
+                        tiles[i, j].left = tiles[i, j-1];
+                        tiles[i, j].right = tiles[i, j+1];
+                    }
+                }
+            }
+        }
+
         public void printMaze()
         {
             for (int i = 0; i < height; i++)

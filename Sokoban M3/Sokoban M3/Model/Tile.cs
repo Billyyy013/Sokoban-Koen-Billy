@@ -8,8 +8,13 @@ namespace Sokoban_M3.Model
 {
     class Tile
     {
-        protected char ownSymbol { get; set;}
+        public char ownSymbol { get; set;}
         public char displaySymbol { get; set;}
+
+        public Tile above { get; set;}
+        public Tile below { get; set;}
+        public Tile left { get; set;}
+        public Tile right { get; set;}
 
         public void getBarrel()
         {
