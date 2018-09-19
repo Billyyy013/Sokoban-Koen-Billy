@@ -14,15 +14,29 @@ namespace Sokoban_M3.Model
         private Wall[] walls;
         private Chest[] chests;
         private EmptyTile[] emptyTiles;
-        
-        public Maze()
-        {
+        public Tile[,] tiles { get; set; }
 
+        private int height;
+        private int width;
+        
+        public Maze(int height, int width)
+        {
+            tiles = new Tile[height,width];
+            this.height = height;
+            this.width = width;
         }
 
-        public void LoadLevel(int level)
+        public void printMaze()
         {
-
+            for (int i = 0; i < height; i++)
+            {
+                for(int j = 0; j < width; j++)
+                {
+                    Console.Write(tiles[i, j].displaySymbol);
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
         }
     }
 }

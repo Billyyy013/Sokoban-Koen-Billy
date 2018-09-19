@@ -10,7 +10,8 @@ namespace Sokoban_M3.Model
     {
         public EmptyTile()
         {
-            Symbol = ' ';
+            ownSymbol = ' ';
+            displaySymbol = ownSymbol;
         }
     }
 }

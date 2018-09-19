@@ -16,6 +16,8 @@ namespace Sokoban_M3.Controller
             outputView = new View.OutputView();
             inputView = new View.InputView();
             parser = new Parser();
+            parser.buildMaze(outputView.RetrieveMazeNumber());
+
         }
     }
 }

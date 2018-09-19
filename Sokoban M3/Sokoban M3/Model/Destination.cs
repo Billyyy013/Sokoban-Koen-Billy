@@ -10,7 +10,8 @@ namespace Sokoban_M3.Model
     {
         public Destination()
         {
-            Symbol = 'x';
+            ownSymbol = 'x';
+            displaySymbol = ownSymbol;
         }
     }
 }
