@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sokoban_M3.Model
 {
-    class Tile
+    abstract class Tile
     {
         public char ownSymbol { get; set;}
         public char displaySymbol { get; set;}
@@ -16,7 +16,7 @@ namespace Sokoban_M3.Model
         public Tile left { get; set;}
         public Tile right { get; set;}
 
-        public void obtainBarrel()
+        public virtual void obtainBarrel()
         {
             displaySymbol = 'O';
         }
