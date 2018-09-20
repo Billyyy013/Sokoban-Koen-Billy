@@ -47,6 +47,7 @@ namespace Sokoban_M3.Controller
                             {
                                 moveDown();
                             }
+                            parser.maze.printMaze();
                             break;
                         case ConsoleKey.LeftArrow:
                             Console.WriteLine("left");
@@ -54,6 +55,7 @@ namespace Sokoban_M3.Controller
                             {
                                 moveLeft();
                             }
+                            parser.maze.printMaze();
                             break;
                         case ConsoleKey.RightArrow:
                             Console.WriteLine("right");
@@ -61,6 +63,7 @@ namespace Sokoban_M3.Controller
                             {
                                 moveRight();
                             }
+                            parser.maze.printMaze();
                             break;
                     }
                 } else
@@ -87,12 +90,48 @@ namespace Sokoban_M3.Controller
         }
         public void moveDown()
         {
+            Model.Tile[,] tiles = parser.maze.tiles;
+            int x = parser.maze.forklift.xLoc;
+            int y = parser.maze.forklift.yLoc;
+            if (tiles[x + 1, y].Equals('0') || tiles[x + 1, y].Equals('O'))
+            {
+                tiles[x + 1, y].loseBarrel();
+                tiles[x + 2, y].obtainBarrel();
+            }
+            tiles[x, y].loseTruck();
+            tiles[x + 1, y].obtainTruck();
+
+            parser.maze.forklift.xLoc = x - 1;
         }
         public void moveLeft()
         {
+            Model.Tile[,] tiles = parser.maze.tiles;
+            int x = parser.maze.forklift.xLoc;
+            int y = parser.maze.forklift.yLoc;
+            if (tiles[x, y - 1].Equals('0') || tiles[x, y - 1].Equals('O'))
+            {
+                tiles[x, y - 1].loseBarrel();
+                tiles[x, y - 2].obtainBarrel();
+            }
+            tiles[x, y].loseTruck();
+            tiles[x, y - 1].obtainTruck();
+
+            parser.maze.forklift.xLoc = x - 1;
         }
         public void moveRight()
         {
+            Model.Tile[,] tiles = parser.maze.tiles;
+            int x = parser.maze.forklift.xLoc;
+            int y = parser.maze.forklift.yLoc;
+            if (tiles[x, y + 1].Equals('0') || tiles[x, y + 1].Equals('O'))
+            {
+                tiles[x, y + 1].loseBarrel();
+                tiles[x, y + 2].obtainBarrel();
+            }
+            tiles[x, y].loseTruck();
+            tiles[x, y + 1].obtainTruck();
+
+            parser.maze.forklift.xLoc = x - 1;
         }
     }
 }
