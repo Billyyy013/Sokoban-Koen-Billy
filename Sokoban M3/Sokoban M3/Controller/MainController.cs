@@ -29,13 +29,15 @@ namespace Sokoban_M3.Controller
             while (true)
             {
                 ConsoleKey key = Console.ReadKey().Key;
+                int x = parser.maze.forklift.xLoc;
+                int y = parser.maze.forklift.yLoc;
                 if (key == ConsoleKey.UpArrow || key == ConsoleKey.DownArrow || key == ConsoleKey.LeftArrow || key == ConsoleKey.RightArrow)
                 {
                     switch (key)
                     {
                         case ConsoleKey.UpArrow:
                             Console.WriteLine("up");
-                            if (parser.maze.checkIfUpPossible())
+                            if (parser.maze.checkIfPossible(x-1,x-2,y,y))
                             {
                                 moveUp();
                             }
@@ -43,7 +45,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case ConsoleKey.DownArrow:
                             Console.WriteLine("down");
-                            if (parser.maze.checkIfDownPossible())
+                            if (parser.maze.checkIfPossible(x+1,x+2,y,y))
                             {
                                 moveDown();
                             }
@@ -51,7 +53,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case ConsoleKey.LeftArrow:
                             Console.WriteLine("left");
-                            if (parser.maze.checkIfLeftPossible())
+                            if (parser.maze.checkIfPossible(x,x,y-1,y-2))
                             {
                                 moveLeft();
                             }
@@ -59,7 +61,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case ConsoleKey.RightArrow:
                             Console.WriteLine("right");
-                            if (parser.maze.checkIfRightPossible())
+                            if (parser.maze.checkIfPossible(x,x,y+1,y+2))
                             {
                                 moveRight();
                             }

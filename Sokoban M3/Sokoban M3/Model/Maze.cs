@@ -45,58 +45,43 @@ namespace Sokoban_M3.Model
             }
         }
          //█ · O 0 x @
-        public bool checkIfUpPossible()
+        public bool checkIfPossible(int x1, int x2, int y1, int y2)
         {
-            int x = forklift.xLoc;
-            int y = forklift.yLoc;
-            if (tiles[x - 1, y].displaySymbol.Equals('█'))
+            //int x = forklift.xLoc;
+            //int y = forklift.yLoc;
+            if (tiles[x1, y1].displaySymbol.Equals('█'))
             {
                 return false;
             }
-            if (tiles[x - 1, y].displaySymbol.Equals('O')&& tiles[x - 2, y].displaySymbol.Equals('█'))
-            {
-                return false;
-            }
-
-            if (tiles[x - 1, y].displaySymbol.Equals('0') && tiles[x - 2, y].displaySymbol.Equals('█'))
+            if (tiles[x1, y1].displaySymbol.Equals('O')&& tiles[x2, y2].displaySymbol.Equals('█'))
             {
                 return false;
             }
 
-            if (tiles[x - 1, y].displaySymbol.Equals('O') && tiles[x - 2, y].displaySymbol.Equals('0'))
+            if (tiles[x1, y1].displaySymbol.Equals('0') && tiles[x2, y2].displaySymbol.Equals('█'))
             {
                 return false;
             }
 
-            if (tiles[x - 1, y].displaySymbol.Equals('0') && tiles[x - 2, y].displaySymbol.Equals('O'))
+            if (tiles[x1, y1].displaySymbol.Equals('O') && tiles[x2, y2].displaySymbol.Equals('0'))
             {
                 return false;
             }
 
-            if (tiles[x - 1, y].displaySymbol.Equals('O') && tiles[x - 2, y].displaySymbol.Equals('O'))
+            if (tiles[x1, y1].displaySymbol.Equals('0') && tiles[x2, y2].displaySymbol.Equals('O'))
             {
                 return false;
             }
 
-            if (tiles[x - 1, y].displaySymbol.Equals('0') && tiles[x - 2, y].displaySymbol.Equals('0'))
+            if (tiles[x1, y1].displaySymbol.Equals('O') && tiles[x2, y2].displaySymbol.Equals('O'))
             {
                 return false;
             }
-            return true;
-        }
 
-        public bool checkIfDownPossible()
-        {
-            return true;
-        }
-
-        public bool checkIfLeftPossible()
-        {
-            return true;
-        }
-
-        public bool checkIfRightPossible()
-        {
+            if (tiles[x1, y1].displaySymbol.Equals('0') && tiles[x2, y2].displaySymbol.Equals('0'))
+            {
+                return false;
+            }
             return true;
         }
 
