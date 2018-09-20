@@ -10,6 +10,7 @@ namespace Sokoban_M3.Model
     {
         public int xLoc { get; set;}
         public int yLoc { get; set;}
+        public char Symbol { get; set;}
         public Forklift()
         {
         }

@@ -9,12 +9,6 @@ namespace Sokoban_M3.Model
     class Maze
     {
         public Forklift forklift { get; set; }
-
-        private Destination[] destinations;
-        private Floor[] floors;
-        private Wall[] walls;
-        private Chest[] chests;
-        private EmptyTile[] emptyTiles;
         public Tile[,] tiles { get; set; }
 
         private int height;

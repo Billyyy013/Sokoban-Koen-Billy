@@ -8,6 +8,7 @@ namespace Sokoban_M3.Model
 {
     class Chest
     {
+        public char Symbol { get; set;}
         public Chest()
         {
         }
