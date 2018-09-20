@@ -21,7 +21,7 @@ namespace Sokoban_M3.Model
             displaySymbol = 'O';
         }
 
-        public void loseBarrel()
+        public virtual void loseBarrel()
         {
             displaySymbol = ownSymbol;
         }

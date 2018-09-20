@@ -63,6 +63,7 @@ namespace Sokoban_M3.Controller
                         case 'o':
                             maze.tiles[i, j] = new Floor();
                             maze.tiles[i, j].obtainBarrel();
+                            maze.amountOfChests++;
                             break;
                     }
                         

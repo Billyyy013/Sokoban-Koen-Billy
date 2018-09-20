@@ -10,6 +10,8 @@ namespace Sokoban_M3.Model
     {
         public Forklift forklift { get; set; }
         public Tile[,] tiles { get; set; }
+        public int amountOfChests { get; set;}
+        public int amountOfChestsOnDestination { get; set;}
 
         private int height;
         private int width;
