@@ -10,7 +10,7 @@
   <Class Name="Sokoban_M3.Model.Destination">
     <Position X="10.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -38,7 +38,7 @@
   <Class Name="Sokoban_M3.Model.Maze">
     <Position X="8.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAEAAAAAAAQAQAABAQAAAgAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAgAEAAAAAAAQAQAABAQAAAgAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -49,7 +49,7 @@
   <Class Name="Sokoban_M3.Model.Tile">
     <Position X="13.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>JAAIAAAAQgAAAAAAAAAAAAAAAAAIAAAQABACAAAAgAA=</HashCode>
+      <HashCode>JABAAAAAAgAAAAAAAAAIAAAAAAAIAAAQAAAAAAAQgAA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -76,7 +76,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAACAAAAAAAACAAABAAQAAAAAAAAAIAA=</HashCode>
+      <HashCode>AgAAAAAAAIAAAAAAAAAAAAACAAABAAQAAAAAAAAAIAA=</HashCode>
       <FileName>Controller\MainController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -89,7 +89,7 @@
   <Class Name="Sokoban_M3.View.OutputView">
     <Position X="7.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAEAAABAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -117,7 +117,7 @@
   <Class Name="Sokoban_M3.Controller.Parser">
     <Position X="5.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
       <FileName>Controller\Parser.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -127,7 +127,7 @@
   <Class Name="Sokoban_M3.View.InputView">
     <Position X="3.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>

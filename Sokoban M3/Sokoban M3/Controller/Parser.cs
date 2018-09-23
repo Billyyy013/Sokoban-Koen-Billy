@@ -15,7 +15,7 @@ namespace Sokoban_M3.Controller
         {
         }
 
-        public void buildMaze(int mazeNumber)
+        public void BuildMaze(int mazeNumber)
         {
 
             string _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
@@ -53,7 +53,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case '@':
                             maze.tiles[i, j] = new Floor();
-                            maze.tiles[i, j].obtainTruck();
+                            maze.tiles[i, j].ObtainTruck();
                             maze.forklift.xLoc = i;
                             maze.forklift.yLoc = j;
                             break;
@@ -62,7 +62,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case 'o':
                             maze.tiles[i, j] = new Floor();
-                            maze.tiles[i, j].obtainBarrel();
+                            maze.tiles[i, j].ObtainBarrel();
                             maze.amountOfChests++;
                             break;
                     }
@@ -70,7 +70,7 @@ namespace Sokoban_M3.Controller
                 }
          
             }
-            maze.setRelativeTo();
+            maze.SetRelativeTo();
         }
     }
 }

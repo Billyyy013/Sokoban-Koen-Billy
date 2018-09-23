@@ -20,12 +20,12 @@ namespace Sokoban_M3.View
             return intTemp;
         }
 
-        public void askForArrowInput()
+        public void AskForArrowInput()
         {
             Console.WriteLine("Gebruik de pijltjes toetsen.");
         }
 
-        public void invalidInputMessage()
+        public void InvalidInputMessage()
         {
             Console.WriteLine("Geen valide input probeer opnieuw");
         }

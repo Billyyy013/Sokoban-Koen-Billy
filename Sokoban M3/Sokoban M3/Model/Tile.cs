@@ -16,22 +16,22 @@ namespace Sokoban_M3.Model
         public Tile left { get; set;}
         public Tile right { get; set;}
 
-        public virtual void obtainBarrel()
+        public virtual void ObtainBarrel()
         {
             displaySymbol = 'O';
         }
 
-        public virtual void loseBarrel()
+        public virtual void LoseBarrel()
         {
             displaySymbol = ownSymbol;
         }
 
-        public void obtainTruck()
+        public void ObtainTruck()
         {
             displaySymbol = '@';
         }
 
-        public void loseTruck()
+        public void LoseTruck()
         {
             displaySymbol = ownSymbol;
         }

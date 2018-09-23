@@ -34,7 +34,7 @@ namespace Sokoban_M3.View
 
         }
 
-        public void printMaze(int height, int width, Model.Tile[,] tiles)
+        public void PrintMaze(int height, int width, Model.Tile[,] tiles)
         {
             Console.WriteLine();
             for (int i = 0; i < height; i++)
@@ -47,7 +47,7 @@ namespace Sokoban_M3.View
             }
         }
 
-        public void levelCompletedMessage()
+        public void LevelCompletedMessage()
         {
             Console.WriteLine("Level Completed!!!");
         }

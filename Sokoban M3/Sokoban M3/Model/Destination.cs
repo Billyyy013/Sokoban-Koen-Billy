@@ -14,7 +14,7 @@ namespace Sokoban_M3.Model
             displaySymbol = ownSymbol;
         }
 
-        public override void obtainBarrel()
+        public override void ObtainBarrel()
         {
             displaySymbol = '0';
         }

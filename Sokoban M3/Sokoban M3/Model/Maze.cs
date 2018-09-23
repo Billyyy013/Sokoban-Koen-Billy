@@ -24,7 +24,7 @@ namespace Sokoban_M3.Model
             this.width = width;
         }
 
-        public void setRelativeTo()
+        public void SetRelativeTo()
         {
             for (int i = 1; i < height; i++)
             {
@@ -40,11 +40,9 @@ namespace Sokoban_M3.Model
                 }
             }
         }
-        //█ · O 0 x @
-        public bool checkIfPossible(int x1, int x2, int y1, int y2)
+
+        public bool CheckIfPossible(int x1, int x2, int y1, int y2)
         {
-            //int x = forklift.xLoc;
-            //int y = forklift.yLoc;
             if (tiles[x1, y1].displaySymbol.Equals('█'))
             {
                 return false;
