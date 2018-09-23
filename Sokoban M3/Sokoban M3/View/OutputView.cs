@@ -12,9 +12,9 @@ namespace Sokoban_M3.View
     {
         public OutputView()
         {
-            PrintGame();
+            PrintWelcomeMessage();
         }
-        public void PrintGame()
+        public void PrintWelcomeMessage()
         {
             Console.WriteLine("┌─────────────────────────────────────────────────────────┐");
             Console.WriteLine("| Welkom bij Sokoban                                      |");
@@ -34,13 +34,22 @@ namespace Sokoban_M3.View
 
         }
 
-        public int RetrieveMazeNumber()
+        public void printMaze(int height, int width, Model.Tile[,] tiles)
         {
-            int intTemp = Convert.ToInt32(Console.ReadLine());
-
-            return intTemp;
+            Console.WriteLine();
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < width; j++)
+                {
+                    Console.Write(tiles[i, j].displaySymbol);
+                }
+                Console.WriteLine();
+            }
         }
 
-
+        public void levelCompletedMessage()
+        {
+            Console.WriteLine("Level Completed!!!");
+        }
     }
 }

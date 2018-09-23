@@ -10,11 +10,11 @@ namespace Sokoban_M3.Model
     {
         public Forklift forklift { get; set; }
         public Tile[,] tiles { get; set; }
-        public int amountOfChests { get; set;}
-        public int amountOfChestsOnDestination { get; set;}
+        public int amountOfChests { get; set; }
+        public int amountOfChestsOnDestination { get; set; }
 
-        private int height;
-        private int width;
+        public int height { get; }
+        public int width { get; }
 
         public Maze(int height, int width)
         {
@@ -40,7 +40,7 @@ namespace Sokoban_M3.Model
                 }
             }
         }
-         //█ · O 0 x @
+        //█ · O 0 x @
         public bool checkIfPossible(int x1, int x2, int y1, int y2)
         {
             //int x = forklift.xLoc;
@@ -49,7 +49,7 @@ namespace Sokoban_M3.Model
             {
                 return false;
             }
-            if (tiles[x1, y1].displaySymbol.Equals('O')&& tiles[x2, y2].displaySymbol.Equals('█'))
+            if (tiles[x1, y1].displaySymbol.Equals('O') && tiles[x2, y2].displaySymbol.Equals('█'))
             {
                 return false;
             }
@@ -79,18 +79,6 @@ namespace Sokoban_M3.Model
                 return false;
             }
             return true;
-        }
-
-        public void printMaze()
-        {
-            for (int i = 0; i < height; i++)
-            {
-                for (int j = 0; j < width; j++)
-                {
-                    Console.Write(tiles[i, j].displaySymbol);
-                }
-                Console.WriteLine();
-            }
         }
     }
 }

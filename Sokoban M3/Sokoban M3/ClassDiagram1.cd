@@ -36,14 +36,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Maze">
-    <Position X="8.25" Y="3.5" Width="1.5" />
+    <Position X="8.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAAAAAAAQAQAAAAQAAAgAAAAAAAAIAAAAAAIA=</HashCode>
+      <HashCode>AQAAAAEAAAAAAAQAQAABAQAAAgAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="tiles" />
       <Property Name="forklift" />
+      <Property Name="tiles" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban_M3.Model.Tile">
@@ -68,20 +68,28 @@
   </Class>
   <Class Name="Sokoban_M3.Controller.MainController">
     <Position X="5.75" Y="2.25" Width="1.5" />
+    <AssociationLine Name="inputView" Type="Sokoban_M3.View.InputView" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.109" Y="2.25" />
+        <Point X="6.109" Y="1.761" />
+        <Point X="5.25" Y="1.761" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAAAAAAAAACAAABAAQAAAAACEAAIAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAACAAAAAAAACAAABAAQAAAAAAAAAIAA=</HashCode>
       <FileName>Controller\MainController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="outputView" />
       <Field Name="inputView" />
       <Field Name="parser" />
+      <Property Name="maze" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban_M3.View.OutputView">
     <Position X="7.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -117,9 +125,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban_M3.View.InputView">
-    <Position X="4.25" Y="1" Width="1.5" />
+    <Position X="3.75" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
