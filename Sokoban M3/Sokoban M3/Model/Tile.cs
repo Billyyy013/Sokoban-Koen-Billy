@@ -8,35 +8,35 @@ namespace Sokoban_M3.Model
 {
     abstract class Tile
     {
-        public char ownSymbol { get; set;}
-        public char displaySymbol { get; set;}
-        public bool hasChest { get; set; }
+        public char OwnSymbol { get; set;}
+        public char DisplaySymbol { get; set;}
+        public bool HasChest { get; set; }
 
-        public Tile above { get; set;}
-        public Tile below { get; set;}
-        public Tile left { get; set;}
-        public Tile right { get; set;}
+        public Tile Above { get; set;}
+        public Tile Below { get; set;}
+        public Tile Left { get; set;}
+        public Tile Right { get; set;}
 
-        public virtual void ObtainChest(char Symbol)
+        public virtual void ObtainChest(char symbol)
         {
-            displaySymbol = Symbol;
-            hasChest = true;
+            DisplaySymbol = symbol;
+            HasChest = true;
         }
 
         public virtual void LoseChest()
         {
-            displaySymbol = ownSymbol;
-            hasChest = false;
+            DisplaySymbol = OwnSymbol;
+            HasChest = false;
         }
 
-        public void ObtainForklift(char Symbol)
+        public void ObtainForklift(char symbol)
         {
-            displaySymbol = Symbol;
+            DisplaySymbol = symbol;
         }
 
         public void LoseForklift()
         {
-            displaySymbol = ownSymbol;
+            DisplaySymbol = OwnSymbol;
         }
     }
 }

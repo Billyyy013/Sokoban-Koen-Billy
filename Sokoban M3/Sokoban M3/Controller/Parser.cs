@@ -10,7 +10,7 @@ namespace Sokoban_M3.Controller
 {
     class Parser
     {
-        public Model.Maze maze { get; set; }
+        public Model.Maze Maze { get; set; }
         public Parser()
         {
         }
@@ -35,7 +35,7 @@ namespace Sokoban_M3.Controller
             }
 
             char[] characters = list[0].ToArray();
-            maze = new Maze(list.Count,characters.Length);
+            Maze = new Maze(list.Count,characters.Length);
             for (int i = 0; i < list.Count; i++) { 
                 characters = list[i].ToArray();
                 for (int j = 0; j < characters.Length; j++)
@@ -43,34 +43,34 @@ namespace Sokoban_M3.Controller
                     switch (characters[j])
                     {
                         case ' ':
-                            maze.tiles[i, j] = new EmptyTile();
+                            Maze.Tiles[i, j] = new EmptyTile();
                             break;
                         case '.':
-                            maze.tiles[i, j] = new Floor();
+                            Maze.Tiles[i, j] = new Floor();
                             break;
                         case '#':
-                            maze.tiles[i, j] = new Wall();
+                            Maze.Tiles[i, j] = new Wall();
                             break;
                         case '@':
-                            maze.tiles[i, j] = new Floor();
-                            maze.tiles[i, j].ObtainForklift(maze.forklift.Symbol);
-                            maze.forklift.xLoc = i;
-                            maze.forklift.yLoc = j;
+                            Maze.Tiles[i, j] = new Floor();
+                            Maze.Tiles[i, j].ObtainForklift(Maze.Forklift.Symbol);
+                            Maze.Forklift.XLoc = i;
+                            Maze.Forklift.YLoc = j;
                             break;
                         case 'x':
-                            maze.tiles[i, j] = new Destination();
+                            Maze.Tiles[i, j] = new Destination();
                             break;
                         case 'o':
-                            maze.tiles[i, j] = new Floor();
-                            maze.tiles[i, j].ObtainChest(maze.chest.Symbol);
-                            maze.amountOfChests++;
+                            Maze.Tiles[i, j] = new Floor();
+                            Maze.Tiles[i, j].ObtainChest(Maze.Chest.Symbol);
+                            Maze.AmountOfChests++;
                             break;
                     }
                         
                 }
          
             }
-            maze.SetRelativeTo();
+            Maze.SetRelativeTo();
         }
     }
 }

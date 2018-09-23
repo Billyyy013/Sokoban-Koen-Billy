@@ -8,36 +8,36 @@ namespace Sokoban_M3.Model
 {
     class Maze
     {
-        public Forklift forklift { get; set; }
-        public Chest chest { get; set; }
-        public Tile[,] tiles { get; set; }
-        public int amountOfChests { get; set; }
-        public int amountOfChestsOnDestination { get; set; }
+        public Forklift Forklift { get; set; }
+        public Chest Chest { get; set; }
+        public Tile[,] Tiles { get; set; }
+        public int AmountOfChests { get; set; }
+        public int AmountOfChestsOnDestination { get; set; }
 
-        public int height { get; }
-        public int width { get; }
+        public int Height { get; }
+        public int Width { get; }
 
         public Maze(int height, int width)
         {
-            forklift = new Forklift();
-            chest = new Chest();
-            tiles = new Tile[height, width];
-            this.height = height;
-            this.width = width;
+            Forklift = new Forklift();
+            Chest = new Chest();
+            Tiles = new Tile[height, width];
+            this.Height = height;
+            this.Width = width;
         }
 
         public void SetRelativeTo()
         {
-            for (int i = 1; i < height; i++)
+            for (int i = 1; i < Height; i++)
             {
-                for (int j = 1; j < width; j++)
+                for (int j = 1; j < Width; j++)
                 {
-                    if (tiles[i, j].ownSymbol.Equals('o') || tiles[i, j].ownSymbol.Equals('·')|| tiles[i,j].ownSymbol.Equals('x'))
+                    if (Tiles[i, j].OwnSymbol.Equals('o') || Tiles[i, j].OwnSymbol.Equals('·')|| Tiles[i,j].OwnSymbol.Equals('x'))
                     {
-                        tiles[i, j].above = tiles[i - 1, j];
-                        tiles[i, j].below = tiles[i + 1, j];
-                        tiles[i, j].left = tiles[i, j - 1];
-                        tiles[i, j].right = tiles[i, j + 1];
+                        Tiles[i, j].Above = Tiles[i - 1, j];
+                        Tiles[i, j].Below = Tiles[i + 1, j];
+                        Tiles[i, j].Left = Tiles[i, j - 1];
+                        Tiles[i, j].Right = Tiles[i, j + 1];
                     }
                 }
             }
@@ -45,15 +45,15 @@ namespace Sokoban_M3.Model
 
         public bool CheckIfPossible(Tile one, Tile two)
         {
-            if (one.displaySymbol.Equals('█'))
+            if (one.DisplaySymbol.Equals('█'))
             {
                 return false;
             }
-            if (one.hasChest && two.displaySymbol.Equals('█'))
+            if (one.HasChest && two.DisplaySymbol.Equals('█'))
             {
                 return false;
             }
-            if (one.hasChest && two.hasChest)
+            if (one.HasChest && two.HasChest)
             {
                 return false;
             }

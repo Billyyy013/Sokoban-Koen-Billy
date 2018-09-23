@@ -10,15 +10,15 @@ namespace Sokoban_M3.Model
     {
         public Destination()
         {
-            ownSymbol = 'x';
-            displaySymbol = ownSymbol;
-            hasChest = false;
+            OwnSymbol = 'x';
+            DisplaySymbol = OwnSymbol;
+            HasChest = false;
         }
 
-        public override void ObtainChest(char Symbol)
+        public override void ObtainChest(char symbol)
         {
-            displaySymbol = Symbol;
-            hasChest = true;
+            DisplaySymbol = symbol;
+            HasChest = true;
         }
     }
 }

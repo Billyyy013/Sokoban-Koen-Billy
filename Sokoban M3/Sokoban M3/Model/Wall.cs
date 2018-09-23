@@ -10,9 +10,9 @@ namespace Sokoban_M3.Model
     {
         public Wall()
         {
-            ownSymbol = '█';
-            displaySymbol = ownSymbol;
-            hasChest = false;
+            OwnSymbol = '█';
+            DisplaySymbol = OwnSymbol;
+            HasChest = false;
         }
     }
 }

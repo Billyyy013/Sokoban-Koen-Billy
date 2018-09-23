@@ -8,8 +8,8 @@ namespace Sokoban_M3.Model
 {
     abstract class Entity
     {
-        public int xLoc { get; set; }
-        public int yLoc { get; set; }
+        public int XLoc { get; set; }
+        public int YLoc { get; set; }
         public char Symbol { get; set; }
     }
 }

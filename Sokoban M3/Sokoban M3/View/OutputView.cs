@@ -41,7 +41,7 @@ namespace Sokoban_M3.View
             {
                 for (int j = 0; j < width; j++)
                 {
-                    Console.Write(tiles[i, j].displaySymbol);
+                    Console.Write(tiles[i, j].DisplaySymbol);
                 }
                 Console.WriteLine();
             }
