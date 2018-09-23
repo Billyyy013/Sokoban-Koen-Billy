@@ -49,7 +49,7 @@
   <Class Name="Sokoban_M3.Model.Tile">
     <Position X="13.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>JABAAAAAIgAAAAAAAAAAAAAIAAAIAAAQAAAgAAAAgAA=</HashCode>
+      <HashCode>JAAAAAAAIgAAAAAAAAAAAAgIAAAIAAAQAAAgAAAAgBA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
   </Class>

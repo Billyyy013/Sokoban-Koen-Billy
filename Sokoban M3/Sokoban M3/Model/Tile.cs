@@ -29,12 +29,12 @@ namespace Sokoban_M3.Model
             hasChest = false;
         }
 
-        public void ObtainTruck()
+        public void ObtainForklift()
         {
             displaySymbol = '@';
         }
 
-        public void LoseTruck()
+        public void LoseForklift()
         {
             displaySymbol = ownSymbol;
         }

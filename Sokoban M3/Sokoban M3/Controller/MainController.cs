@@ -108,8 +108,8 @@ namespace Sokoban_M3.Controller
                     maze.amountOfChestsOnDestination++;
                 }
             }
-            tiles[x, y].LoseTruck();
-            one.ObtainTruck();
+            tiles[x, y].LoseForklift();
+            one.ObtainForklift();
         }
 
     }
