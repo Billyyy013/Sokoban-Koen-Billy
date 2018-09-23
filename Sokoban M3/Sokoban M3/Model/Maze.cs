@@ -47,11 +47,11 @@ namespace Sokoban_M3.Model
             {
                 return false;
             }
-            if (one.hasBarrel && two.displaySymbol.Equals('█'))
+            if (one.hasChest && two.displaySymbol.Equals('█'))
             {
                 return false;
             }
-            if (one.hasBarrel && two.hasBarrel)
+            if (one.hasChest && two.hasChest)
             {
                 return false;
             }

@@ -91,8 +91,8 @@ namespace Sokoban_M3.Controller
             if (one.displaySymbol.Equals('O'))
 
             {
-                one.LoseBarrel();
-                two.ObtainBarrel();
+                one.LoseChest();
+                two.ObtainChest();
                 if (two.displaySymbol.Equals('0'))
                 {
                     maze.amountOfChestsOnDestination++;
@@ -100,9 +100,9 @@ namespace Sokoban_M3.Controller
             }
             else if (one.displaySymbol.Equals('0'))
             {
-                one.LoseBarrel();
+                one.LoseChest();
                 maze.amountOfChestsOnDestination--;
-                two.ObtainBarrel();
+                two.ObtainChest();
                 if (two.displaySymbol.Equals('0'))
                 {
                     maze.amountOfChestsOnDestination++;

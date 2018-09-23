@@ -62,7 +62,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case 'o':
                             maze.tiles[i, j] = new Floor();
-                            maze.tiles[i, j].ObtainBarrel();
+                            maze.tiles[i, j].ObtainChest();
                             maze.amountOfChests++;
                             break;
                     }

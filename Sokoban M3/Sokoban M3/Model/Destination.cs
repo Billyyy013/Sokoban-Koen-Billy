@@ -12,10 +12,10 @@ namespace Sokoban_M3.Model
         {
             ownSymbol = 'x';
             displaySymbol = ownSymbol;
-            hasBarrel = false;
+            hasChest = false;
         }
 
-        public override void ObtainBarrel()
+        public override void ObtainChest()
         {
             displaySymbol = '0';
         }

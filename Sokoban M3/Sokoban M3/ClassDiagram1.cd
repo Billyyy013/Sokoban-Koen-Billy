@@ -10,7 +10,7 @@
   <Class Name="Sokoban_M3.Model.Destination">
     <Position X="10.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -49,7 +49,7 @@
   <Class Name="Sokoban_M3.Model.Tile">
     <Position X="13.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>JABAAAAAAgAAAAAACAAIAAAAAAAIAAAQAAAAAAAQgAA=</HashCode>
+      <HashCode>JABAAAAAIgAAAAAAAAAAAAAIAAAIAAAQAAAgAAAAgAA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
   </Class>

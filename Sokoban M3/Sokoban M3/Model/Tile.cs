@@ -10,23 +10,23 @@ namespace Sokoban_M3.Model
     {
         public char ownSymbol { get; set;}
         public char displaySymbol { get; set;}
-        public bool hasBarrel { get; set; }
+        public bool hasChest { get; set; }
 
         public Tile above { get; set;}
         public Tile below { get; set;}
         public Tile left { get; set;}
         public Tile right { get; set;}
 
-        public virtual void ObtainBarrel()
+        public virtual void ObtainChest()
         {
             displaySymbol = 'O';
-            hasBarrel = true;
+            hasChest = true;
         }
 
-        public virtual void LoseBarrel()
+        public virtual void LoseChest()
         {
             displaySymbol = ownSymbol;
-            hasBarrel = false;
+            hasChest = false;
         }
 
         public void ObtainTruck()
