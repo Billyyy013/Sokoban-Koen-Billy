@@ -76,6 +76,13 @@
   </Class>
   <Class Name="Sokoban_M3.Controller.MainController">
     <Position X="5.75" Y="2.25" Width="1.5" />
+    <AssociationLine Name="outputView" Type="Sokoban_M3.View.OutputView" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.711" Y="2.25" />
+        <Point X="6.711" Y="1.75" />
+        <Point X="7.75" Y="1.75" />
+      </Path>
+    </AssociationLine>
     <AssociationLine Name="inputView" Type="Sokoban_M3.View.InputView" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="6.109" Y="2.25" />
