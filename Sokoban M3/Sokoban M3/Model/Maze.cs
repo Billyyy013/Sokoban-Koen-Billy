@@ -9,6 +9,7 @@ namespace Sokoban_M3.Model
     class Maze
     {
         public Forklift forklift { get; set; }
+        public Chest chest { get; set; }
         public Tile[,] tiles { get; set; }
         public int amountOfChests { get; set; }
         public int amountOfChestsOnDestination { get; set; }
@@ -19,6 +20,7 @@ namespace Sokoban_M3.Model
         public Maze(int height, int width)
         {
             forklift = new Forklift();
+            chest = new Chest();
             tiles = new Tile[height, width];
             this.height = height;
             this.width = width;

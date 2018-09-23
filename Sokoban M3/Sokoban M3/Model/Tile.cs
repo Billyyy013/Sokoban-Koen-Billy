@@ -17,9 +17,9 @@ namespace Sokoban_M3.Model
         public Tile left { get; set;}
         public Tile right { get; set;}
 
-        public virtual void ObtainChest()
+        public virtual void ObtainChest(char Symbol)
         {
-            displaySymbol = 'O';
+            displaySymbol = Symbol;
             hasChest = true;
         }
 
@@ -29,9 +29,9 @@ namespace Sokoban_M3.Model
             hasChest = false;
         }
 
-        public void ObtainForklift()
+        public void ObtainForklift(char Symbol)
         {
-            displaySymbol = '@';
+            displaySymbol = Symbol;
         }
 
         public void LoseForklift()

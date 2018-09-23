@@ -2,8 +2,15 @@
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Sokoban_M3.Model.Chest">
     <Position X="6.25" Y="6.5" Width="1.5" />
+    <InheritanceLine Type="Sokoban_M3.Model.Entity" FixedFromPoint="true">
+      <Path>
+        <Point X="8.25" Y="9" />
+        <Point X="7" Y="9" />
+        <Point X="7" Y="8.184" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Model\Chest.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -31,19 +38,20 @@
   <Class Name="Sokoban_M3.Model.Forklift">
     <Position X="8.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAKAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Forklift.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Maze">
     <Position X="8.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAgAEAAAAAAAQAQAABAQAAAgAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAgAFAAAAAAAQAQAABAQAAAgAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="forklift" />
       <Property Name="tiles" />
+      <Property Name="chest" />
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban_M3.Model.Tile">
@@ -129,6 +137,13 @@
     <TypeIdentifier>
       <HashCode>AAAAEAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
       <FileName>View\InputView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban_M3.Model.Entity">
+    <Position X="8.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAKAA=</HashCode>
+      <FileName>Model\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

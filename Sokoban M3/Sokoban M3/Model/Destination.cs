@@ -15,9 +15,10 @@ namespace Sokoban_M3.Model
             hasChest = false;
         }
 
-        public override void ObtainChest()
+        public override void ObtainChest(char Symbol)
         {
-            displaySymbol = '0';
+            displaySymbol = Symbol;
+            hasChest = true;
         }
     }
 }

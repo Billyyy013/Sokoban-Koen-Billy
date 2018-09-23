@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace Sokoban_M3.Model
 {
-    class Chest
+    class Chest : Entity
     {
-        public char Symbol { get; set;}
+        public char SymbolOnDestination { get; set; }
         public Chest()
         {
-
+            Symbol = 'O';
+            SymbolOnDestination = '0';
         }
     }
 }

@@ -53,7 +53,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case '@':
                             maze.tiles[i, j] = new Floor();
-                            maze.tiles[i, j].ObtainForklift();
+                            maze.tiles[i, j].ObtainForklift(maze.forklift.Symbol);
                             maze.forklift.xLoc = i;
                             maze.forklift.yLoc = j;
                             break;
@@ -62,7 +62,7 @@ namespace Sokoban_M3.Controller
                             break;
                         case 'o':
                             maze.tiles[i, j] = new Floor();
-                            maze.tiles[i, j].ObtainChest();
+                            maze.tiles[i, j].ObtainChest(maze.chest.Symbol);
                             maze.amountOfChests++;
                             break;
                     }

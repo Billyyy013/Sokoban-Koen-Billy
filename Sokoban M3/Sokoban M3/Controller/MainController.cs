@@ -92,24 +92,28 @@ namespace Sokoban_M3.Controller
 
             {
                 one.LoseChest();
-                two.ObtainChest();
-                if (two.displaySymbol.Equals('0'))
+                if (two.ownSymbol.Equals('x'))
                 {
                     maze.amountOfChestsOnDestination++;
+                    two.ObtainChest(maze.chest.SymbolOnDestination);
+                }
+                else
+                {
+                    two.ObtainChest(maze.chest.Symbol);
                 }
             }
             else if (one.displaySymbol.Equals('0'))
             {
                 one.LoseChest();
                 maze.amountOfChestsOnDestination--;
-                two.ObtainChest();
+                two.ObtainChest(maze.chest.Symbol);
                 if (two.displaySymbol.Equals('0'))
                 {
                     maze.amountOfChestsOnDestination++;
                 }
             }
             tiles[x, y].LoseForklift();
-            one.ObtainForklift();
+            one.ObtainForklift(maze.forklift.Symbol);
         }
 
     }

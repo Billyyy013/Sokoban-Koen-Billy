@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Sokoban_M3.Model
 {
-    class Forklift : Entity
+    abstract class Entity
     {
-        public Forklift()
-        {
-            Symbol = '@';
-        }
+        public int xLoc { get; set; }
+        public int yLoc { get; set; }
+        public char Symbol { get; set; }
     }
 }

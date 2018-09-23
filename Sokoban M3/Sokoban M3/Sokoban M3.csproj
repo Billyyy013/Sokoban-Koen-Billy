@@ -48,6 +48,7 @@
     <Compile Include="Model\Chest.cs" />
     <Compile Include="Model\Destination.cs" />
     <Compile Include="Model\EmptyTile.cs" />
+    <Compile Include="Model\Entity.cs" />
     <Compile Include="Model\Floor.cs" />
     <Compile Include="Model\Forklift.cs" />
     <Compile Include="Model\Maze.cs" />
