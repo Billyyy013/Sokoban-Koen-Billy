@@ -32,37 +32,44 @@ namespace Sokoban_M3.Controller
             while (maze.amountOfChests != maze.amountOfChestsOnDestination)
             {
                 ConsoleKey key = Console.ReadKey().Key;
-                int x = maze.forklift.xLoc;
-                int y = maze.forklift.yLoc;
+                Model.Tile currentTile = maze.tiles[maze.forklift.xLoc, maze.forklift.yLoc];
                 if (key == ConsoleKey.UpArrow || key == ConsoleKey.DownArrow || key == ConsoleKey.LeftArrow || key == ConsoleKey.RightArrow)
                 {
                     switch (key)
                     {
                         case ConsoleKey.UpArrow:
-                            if (maze.CheckIfPossible(x - 1, x - 2, y, y))
+                            if (currentTile.above.above == null) { break;}
+                            if (maze.CheckIfPossible(currentTile.above, currentTile.above.above))
                             {
-                                Move(x - 1, x - 2, y, y);
+                                Move(currentTile.above, currentTile.above.above);
+                                maze.forklift.xLoc--;
                             }
                             outputView.PrintMaze(maze.height, maze.width, maze.tiles);
                             break;
                         case ConsoleKey.DownArrow:
-                            if (maze.CheckIfPossible(x + 1, x + 2, y, y))
+                            if (currentTile.below.below == null) { break; }
+                            if (maze.CheckIfPossible(currentTile.below, currentTile.below.below))
                             {
-                                Move(x + 1, x + 2, y, y);
+                                Move(currentTile.below, currentTile.below.below);
+                                maze.forklift.xLoc++;
                             }
                             outputView.PrintMaze(maze.height, maze.width, maze.tiles);
                             break;
                         case ConsoleKey.LeftArrow:
-                            if (maze.CheckIfPossible(x, x, y - 1, y - 2))
+                            if (currentTile.left.left == null) { break; }
+                            if (maze.CheckIfPossible(currentTile.left, currentTile.left.left))
                             {
-                                Move(x, x, y - 1, y - 2);
+                                Move(currentTile.left, currentTile.left.left);
+                                maze.forklift.yLoc--;
                             }
                             outputView.PrintMaze(maze.height, maze.width, maze.tiles);
                             break;
                         case ConsoleKey.RightArrow:
-                            if (maze.CheckIfPossible(x, x, y + 1, y + 2))
+                            if (currentTile.right.right == null) { break; }
+                            if (maze.CheckIfPossible(currentTile.right, currentTile.right.right))
                             {
-                                Move(x, x, y + 1, y + 2);
+                                Move(currentTile.right, currentTile.right.right);
+                                maze.forklift.yLoc++;
                             }
                             outputView.PrintMaze(maze.height, maze.width, maze.tiles);
                             break;
@@ -76,36 +83,33 @@ namespace Sokoban_M3.Controller
             outputView.LevelCompletedMessage();
         }
 
-        public void Move(int x1, int x2, int y1, int y2)
+        public void Move(Model.Tile one, Model.Tile two)
         {
             Model.Tile[,] tiles = maze.tiles;
             int x = maze.forklift.xLoc;
             int y = maze.forklift.yLoc;
-            if (tiles[x1, y1].displaySymbol.Equals('O'))
+            if (one.displaySymbol.Equals('O'))
 
             {
-                tiles[x1, y1].LoseBarrel();
-                tiles[x2, y2].ObtainBarrel();
-                if (maze.tiles[x2, y2].displaySymbol.Equals('0'))
+                one.LoseBarrel();
+                two.ObtainBarrel();
+                if (two.displaySymbol.Equals('0'))
                 {
                     maze.amountOfChestsOnDestination++;
                 }
             }
-            else if (tiles[x1, y1].displaySymbol.Equals('0'))
+            else if (one.displaySymbol.Equals('0'))
             {
-                tiles[x1, y1].LoseBarrel();
+                one.LoseBarrel();
                 maze.amountOfChestsOnDestination--;
-                tiles[x2, y2].ObtainBarrel();
-                if (parser.maze.tiles[x2, y2].displaySymbol.Equals('0'))
+                two.ObtainBarrel();
+                if (two.displaySymbol.Equals('0'))
                 {
                     maze.amountOfChestsOnDestination++;
                 }
             }
             tiles[x, y].LoseTruck();
-            tiles[x1, y1].ObtainTruck();
-
-            maze.forklift.xLoc = x1;
-            maze.forklift.yLoc = y1;
+            one.ObtainTruck();
         }
 
     }

@@ -12,6 +12,7 @@ namespace Sokoban_M3.Model
         {
             ownSymbol = '█';
             displaySymbol = ownSymbol;
+            hasBarrel = false;
         }
     }
 }

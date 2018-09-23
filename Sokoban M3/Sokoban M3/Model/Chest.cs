@@ -11,6 +11,7 @@ namespace Sokoban_M3.Model
         public char Symbol { get; set;}
         public Chest()
         {
+
         }
     }
 }

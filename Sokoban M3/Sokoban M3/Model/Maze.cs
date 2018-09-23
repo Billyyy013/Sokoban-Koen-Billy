@@ -30,7 +30,7 @@ namespace Sokoban_M3.Model
             {
                 for (int j = 1; j < width; j++)
                 {
-                    if (tiles[i, j].ownSymbol.Equals('o') || tiles[i, j].ownSymbol.Equals('·'))
+                    if (tiles[i, j].ownSymbol.Equals('o') || tiles[i, j].ownSymbol.Equals('·')|| tiles[i,j].ownSymbol.Equals('x'))
                     {
                         tiles[i, j].above = tiles[i - 1, j];
                         tiles[i, j].below = tiles[i + 1, j];
@@ -41,41 +41,21 @@ namespace Sokoban_M3.Model
             }
         }
 
-        public bool CheckIfPossible(int x1, int x2, int y1, int y2)
+        public bool CheckIfPossible(Tile one, Tile two)
         {
-            if (tiles[x1, y1].displaySymbol.Equals('█'))
+            if (one.displaySymbol.Equals('█'))
             {
                 return false;
             }
-            if (tiles[x1, y1].displaySymbol.Equals('O') && tiles[x2, y2].displaySymbol.Equals('█'))
+            if (one.hasBarrel && two.displaySymbol.Equals('█'))
             {
                 return false;
             }
-
-            if (tiles[x1, y1].displaySymbol.Equals('0') && tiles[x2, y2].displaySymbol.Equals('█'))
-            {
-                return false;
-            }
-
-            if (tiles[x1, y1].displaySymbol.Equals('O') && tiles[x2, y2].displaySymbol.Equals('0'))
+            if (one.hasBarrel && two.hasBarrel)
             {
                 return false;
             }
 
-            if (tiles[x1, y1].displaySymbol.Equals('0') && tiles[x2, y2].displaySymbol.Equals('O'))
-            {
-                return false;
-            }
-
-            if (tiles[x1, y1].displaySymbol.Equals('O') && tiles[x2, y2].displaySymbol.Equals('O'))
-            {
-                return false;
-            }
-
-            if (tiles[x1, y1].displaySymbol.Equals('0') && tiles[x2, y2].displaySymbol.Equals('0'))
-            {
-                return false;
-            }
             return true;
         }
     }
