@@ -17,13 +17,13 @@ namespace Sokoban_M3.Model
         public Tile Left { get; set;}
         public Tile Right { get; set;}
 
-        public virtual void ObtainChest(char symbol)
+        public void ObtainChest(char symbol)
         {
             DisplaySymbol = symbol;
             HasChest = true;
         }
 
-        public virtual void LoseChest()
+        public void LoseChest()
         {
             DisplaySymbol = OwnSymbol;
             HasChest = false;

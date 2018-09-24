@@ -14,11 +14,5 @@ namespace Sokoban_M3.Model
             DisplaySymbol = OwnSymbol;
             HasChest = false;
         }
-
-        public override void ObtainChest(char symbol)
-        {
-            DisplaySymbol = symbol;
-            HasChest = true;
-        }
     }
 }
