@@ -50,9 +50,11 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Forklift" />
-      <Property Name="Tiles" />
       <Property Name="Chest" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Tiles" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Sokoban_M3.Model.Tile">
     <Position X="13.5" Y="3.25" Width="1.5" />
