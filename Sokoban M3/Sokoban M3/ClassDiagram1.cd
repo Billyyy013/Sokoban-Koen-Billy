@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Sokoban_M3.Model.Chest">
-    <Position X="6.25" Y="6.5" Width="1.5" />
+    <Position X="6" Y="6.5" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Entity" FixedFromPoint="true">
       <Path>
         <Point X="8.25" Y="9" />
-        <Point X="7" Y="9" />
-        <Point X="7" Y="8.184" />
+        <Point X="6.75" Y="9" />
+        <Point X="6.75" Y="8.184" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -15,19 +15,19 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Destination">
-    <Position X="10.75" Y="3.25" Width="1.5" />
+    <Position X="13.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Floor">
-    <Position X="10.75" Y="1.75" Width="1.5" />
+    <Position X="13.25" Y="1.75" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
       <Path>
-        <Point X="14.25" Y="3.25" />
-        <Point X="14.25" Y="2.375" />
-        <Point X="12.25" Y="2.375" />
+        <Point X="11" Y="3.25" />
+        <Point X="11" Y="2.312" />
+        <Point X="13.25" Y="2.312" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -43,7 +43,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Maze">
-    <Position X="8.25" Y="3" Width="1.5" />
+    <Position X="7.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAABAAAQAABAAAAAEAAAAAAAAIAAQAAAAEAAQA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
@@ -57,18 +57,18 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Sokoban_M3.Model.Tile">
-    <Position X="13.5" Y="3.25" Width="1.5" />
+    <Position X="10.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACAAIAAAAAIAAAAAAAgIABAAAAAACACAAAQAABA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Wall">
-    <Position X="10.75" Y="5" Width="1.5" />
+    <Position X="13.25" Y="5" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
       <Path>
-        <Point X="13.5" Y="5.688" />
-        <Point X="12.25" Y="5.688" />
+        <Point X="11.75" Y="5.625" />
+        <Point X="13.25" Y="5.625" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -90,6 +90,13 @@
         <Point X="6.109" Y="2.25" />
         <Point X="6.109" Y="1.761" />
         <Point X="5.25" Y="1.761" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Maze" Type="Sokoban_M3.Model.Maze" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.25" Y="3.062" />
+        <Point X="8.625" Y="3.062" />
+        <Point X="8.625" Y="3.5" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -118,12 +125,12 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.EmptyTile">
-    <Position X="10.75" Y="6.5" Width="1.5" />
+    <Position X="13.25" Y="6.5" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedToPoint="true">
       <Path>
-        <Point X="14.25" Y="6.536" />
-        <Point X="14.25" Y="7.188" />
-        <Point X="12.25" Y="7.188" />
+        <Point X="11" Y="6.536" />
+        <Point X="11" Y="7.188" />
+        <Point X="13.25" Y="7.188" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -132,7 +139,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Controller.Parser">
-    <Position X="5.75" Y="4.75" Width="1.5" />
+    <Position X="3.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIAAAA=</HashCode>
       <FileName>Controller\Parser.cs</FileName>
