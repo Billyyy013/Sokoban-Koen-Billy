@@ -35,42 +35,60 @@ namespace Sokoban_M3.Controller
             }
 
             char[] characters = list[0].ToArray();
-            Maze = new Maze(list.Count,characters.Length);
-            for (int i = 0; i < list.Count; i++) { 
+            Maze = new Maze();
+            Model.Tile[,] tiles = new Model.Tile[list.Count, characters.Length];
+            for (int i = 0; i < list.Count; i++)
+            {
                 characters = list[i].ToArray();
                 for (int j = 0; j < characters.Length; j++)
                 {
                     switch (characters[j])
                     {
                         case ' ':
-                            Maze.Tiles[i, j] = new EmptyTile();
+                            tiles[i, j] = new EmptyTile();
                             break;
                         case '.':
-                            Maze.Tiles[i, j] = new Floor();
+                            tiles[i, j] = new Floor();
                             break;
                         case '#':
-                            Maze.Tiles[i, j] = new Wall();
+                            tiles[i, j] = new Wall();
                             break;
                         case '@':
-                            Maze.Tiles[i, j] = new Floor();
-                            Maze.Tiles[i, j].ObtainForklift(Maze.Forklift.Symbol);
-                            Maze.Forklift.XLoc = i;
-                            Maze.Forklift.YLoc = j;
+                            tiles[i, j] = new Floor();
+                            Maze.Current = tiles[i, j];
+                            Maze.Current.Forklift = new Model.Forklift();
+                            Maze.Current.HasForklift = true;
                             break;
                         case 'x':
-                            Maze.Tiles[i, j] = new Destination();
+                            tiles[i, j] = new Destination();
                             break;
                         case 'o':
-                            Maze.Tiles[i, j] = new Floor();
-                            Maze.Tiles[i, j].ObtainChest(Maze.Chest.Symbol);
+                            tiles[i, j] = new Floor();
+                            tiles[i, j].PutChestOnThisField(new Chest());
                             Maze.AmountOfChests++;
                             break;
                     }
-                        
+                    if (Maze.First == null)
+                    {
+                        Maze.First = tiles[i, j];
+                    }
+
                 }
-         
+
             }
-            Maze.SetRelativeTo();
+            for (int i = 0; i < list.Count; i++)
+            {
+                for (int j = 0; j < characters.Length; j++)
+                {
+                    if (i - 1 > -1) { tiles[i, j].Above = tiles[i - 1, j]; }
+                    if(i+1 < list.Count){tiles[i, j].Below = tiles[i + 1, j];
+                    }
+                    if (j-1>-1) {  tiles[i, j].Left = tiles[i, j - 1];
+                    }
+                    if(j+1 < characters.Length){  tiles[i, j].Right = tiles[i, j + 1];
+                    }
+                }
+            }
         }
     }
 }

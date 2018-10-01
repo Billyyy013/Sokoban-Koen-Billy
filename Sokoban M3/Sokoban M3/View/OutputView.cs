@@ -34,16 +34,21 @@ namespace Sokoban_M3.View
 
         }
 
-        public void PrintMaze(int height, int width, Model.Tile[,] tiles)
+        public void PrintMaze(Model.Tile first)
         {
             Console.WriteLine();
-            for (int i = 0; i < height; i++)
+            Model.Tile horizontal = first;
+            Model.Tile vertical = first;
+            while (vertical != null)
             {
-                for (int j = 0; j < width; j++)
+                while (horizontal !=null)
                 {
-                    Console.Write(tiles[i, j].DisplaySymbol);
+                    Console.Write(horizontal.Symbol);
+                    horizontal = horizontal.Right;
                 }
                 Console.WriteLine();
+                vertical = vertical.Below;
+                horizontal = vertical;
             }
         }
 
