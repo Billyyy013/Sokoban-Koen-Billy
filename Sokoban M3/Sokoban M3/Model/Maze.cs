@@ -8,17 +8,32 @@ namespace Sokoban_M3.Model
 {
     class Maze
     {
-        public Forklift Forklift { get; set; }
         public int AmountOfChests { get; set; }
         public int AmountOfChestsOnDestination { get; set; }
 
         public Tile Current { get; set; }
         public Tile First { get; set; }
-        public Tile ForkTruck { get; set; }
 
         public Maze()
         {
-            Forklift = new Forklift();
+        }
+
+        public void countChestsOnDestiation()
+        {
+            int count = 0;
+            Model.Tile horizontal = First;
+            Model.Tile vertical = First;
+            while (vertical != null)
+            {
+                while (horizontal != null)
+                {
+                    if (horizontal.Symbol.Equals('0')) { count++; }
+                    horizontal = horizontal.Right;
+                }
+                vertical = vertical.Below;
+                horizontal = vertical;
+            }
+            AmountOfChestsOnDestination = count;
         }
     }
 }

@@ -24,9 +24,7 @@
     <Position X="11.75" Y="1.75" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11" Y="2.144" />
-        <Point X="11.375" Y="2.144" />
-        <Point X="11.375" Y="2.125" />
+        <Point X="11" Y="2.125" />
         <Point X="11.75" Y="2.125" />
       </Path>
     </InheritanceLine>
@@ -45,11 +43,10 @@
   <Class Name="Sokoban_M3.Model.Maze">
     <Position X="6.75" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAQQBAACAAAAAAAAAAAAAAQAAAAAAAQA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQAAAACAAACAAAAAAAAAAQAAAAAAAQA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Forklift" />
       <Property Name="First" />
       <Property Name="Current" />
     </ShowAsAssociation>
@@ -69,7 +66,7 @@
     <Position X="11.75" Y="3.75" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11" Y="4.384" />
+        <Point X="11" Y="4.125" />
         <Point X="11.154" Y="4.1" />
         <Point X="11.75" Y="4.1" />
       </Path>
@@ -130,10 +127,7 @@
     <Position X="11.75" Y="4.75" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="10.5" Y="5.353" />
-        <Point X="10.5" Y="5.545" />
-        <Point X="11.558" Y="5.545" />
-        <Point X="11.558" Y="5.062" />
+        <Point X="11" Y="5.062" />
         <Point X="11.75" Y="5.062" />
       </Path>
     </InheritanceLine>

@@ -30,7 +30,6 @@ namespace Sokoban_M3.Controller
             while ((line = tr.ReadLine()) != null)
             {
                 list.Add(line);
-                //System.Console.WriteLine(line);
 
             }
 

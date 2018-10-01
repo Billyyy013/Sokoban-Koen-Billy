@@ -38,20 +38,36 @@ namespace Sokoban_M3.Controller
                     switch (key)
                     {
                         case ConsoleKey.UpArrow:
-                            if (currentTile.Above.Above == null) { break;}
-                            if (Maze.Current.Above.PutForkliftOnThisField(Maze.Current, Maze.Current.Above.Above)) { Maze.Current = Maze.Current.Above; }
+                            if (currentTile.Above.Above == null) { break; }
+                            if (Maze.Current.Above.PutForkliftOnThisField(Maze.Current, Maze.Current.Above.Above))
+                            {
+                                Maze.Current = Maze.Current.Above;
+                                Maze.countChestsOnDestiation();
+                            }
                             break;
                         case ConsoleKey.DownArrow:
                             if (currentTile.Below.Below == null) { break; }
-                            if (Maze.Current.Below.PutForkliftOnThisField(Maze.Current, Maze.Current.Below.Below)) { Maze.Current = Maze.Current.Below; }
+                            if (Maze.Current.Below.PutForkliftOnThisField(Maze.Current, Maze.Current.Below.Below))
+                            {
+                                Maze.Current = Maze.Current.Below;
+                                Maze.countChestsOnDestiation();
+                            }
                             break;
                         case ConsoleKey.LeftArrow:
                             if (currentTile.Left.Left == null) { break; }
-                            if (Maze.Current.Left.PutForkliftOnThisField(Maze.Current, Maze.Current.Left.Left)) { Maze.Current = Maze.Current.Left; }
+                            if (Maze.Current.Left.PutForkliftOnThisField(Maze.Current, Maze.Current.Left.Left))
+                            {
+                                Maze.Current = Maze.Current.Left;
+                                Maze.countChestsOnDestiation();
+                            }
                             break;
                         case ConsoleKey.RightArrow:
                             if (currentTile.Right.Right == null) { break; }
-                            if (Maze.Current.Right.PutForkliftOnThisField(Maze.Current, Maze.Current.Right.Right)) { Maze.Current = Maze.Current.Right; }
+                            if (Maze.Current.Right.PutForkliftOnThisField(Maze.Current, Maze.Current.Right.Right))
+                            {
+                                Maze.Current = Maze.Current.Right;
+                                Maze.countChestsOnDestiation();
+                            }
                             break;
                     }
                     outputView.PrintMaze(Maze.First);
