@@ -42,7 +42,7 @@ namespace Sokoban_M3.Controller
                             if (Maze.Current.Above.PutForkliftOnThisField(Maze.Current, Maze.Current.Above.Above))
                             {
                                 Maze.Current = Maze.Current.Above;
-                                Maze.countChestsOnDestiation();
+                                Maze.CountChestsOnDestiation();
                             }
                             break;
                         case ConsoleKey.DownArrow:
@@ -50,7 +50,7 @@ namespace Sokoban_M3.Controller
                             if (Maze.Current.Below.PutForkliftOnThisField(Maze.Current, Maze.Current.Below.Below))
                             {
                                 Maze.Current = Maze.Current.Below;
-                                Maze.countChestsOnDestiation();
+                                Maze.CountChestsOnDestiation();
                             }
                             break;
                         case ConsoleKey.LeftArrow:
@@ -58,7 +58,7 @@ namespace Sokoban_M3.Controller
                             if (Maze.Current.Left.PutForkliftOnThisField(Maze.Current, Maze.Current.Left.Left))
                             {
                                 Maze.Current = Maze.Current.Left;
-                                Maze.countChestsOnDestiation();
+                                Maze.CountChestsOnDestiation();
                             }
                             break;
                         case ConsoleKey.RightArrow:
@@ -66,7 +66,7 @@ namespace Sokoban_M3.Controller
                             if (Maze.Current.Right.PutForkliftOnThisField(Maze.Current, Maze.Current.Right.Right))
                             {
                                 Maze.Current = Maze.Current.Right;
-                                Maze.countChestsOnDestiation();
+                                Maze.CountChestsOnDestiation();
                             }
                             break;
                     }

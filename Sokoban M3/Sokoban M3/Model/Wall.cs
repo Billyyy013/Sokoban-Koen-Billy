@@ -12,8 +12,6 @@ namespace Sokoban_M3.Model
         public Wall()
         {
             Symbol = '█';
-            HasForklift = false;
-            HasChest = false;
         }
 
         //You can't put a chest on a wall as such this methode will return false when used

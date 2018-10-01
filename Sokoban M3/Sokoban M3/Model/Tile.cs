@@ -10,8 +10,6 @@ namespace Sokoban_M3.Model
     {
         protected char _symbol;
         abstract public char Symbol { get; set; }
-        public bool HasChest { get; set; }
-        public bool HasForklift { get; set; }
 
         public Tile Above { get; set;}
         public Tile Below { get; set;}

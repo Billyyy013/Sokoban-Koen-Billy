@@ -12,11 +12,11 @@ namespace Sokoban_M3.Model
         {
             get
             {
-                if (HasForklift == true)
+                if (Forklift != null)
                 {
                     return Forklift.Symbol;
                 }
-                else if (HasChest == true)
+                else if (Chest != null)
                 {
                     return Chest.SymbolOnDestination;
                 }
@@ -30,16 +30,13 @@ namespace Sokoban_M3.Model
         public Destination()
         {
             _symbol = 'x';
-            HasChest = false;
-            HasForklift = false;
         }
 
         public override bool PutChestOnThisField(Chest chest)
         {
-            if (!HasChest)
+            if (Chest == null)
             {
                 this.Chest = chest;
-                HasChest = true;
                 return true;
             }
             return false;
@@ -47,11 +44,9 @@ namespace Sokoban_M3.Model
 
         public override bool PutForkliftOnThisField(Tile current, Tile next)
         {
-            if (!HasChest)
+            if (Chest == null)
             {
                 this.Forklift = current.Forklift;
-                HasForklift = true;
-                current.HasForklift = false;
                 current.Forklift = null;
                 return true;
             }
@@ -60,10 +55,7 @@ namespace Sokoban_M3.Model
                 if (next.PutChestOnThisField(this.Chest))
                 {
                     this.Chest = null;
-                    HasChest = false;
                     this.Forklift = current.Forklift;
-                    HasForklift = true;
-                    current.HasForklift = false;
                     current.Forklift = null;
                     return true;
                 }

@@ -18,7 +18,7 @@ namespace Sokoban_M3.Model
         {
         }
 
-        public void countChestsOnDestiation()
+        public void CountChestsOnDestiation()
         {
             int count = 0;
             Model.Tile horizontal = First;

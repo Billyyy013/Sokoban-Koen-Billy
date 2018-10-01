@@ -56,7 +56,6 @@ namespace Sokoban_M3.Controller
                             tiles[i, j] = new Floor();
                             Maze.Current = tiles[i, j];
                             Maze.Current.Forklift = new Model.Forklift();
-                            Maze.Current.HasForklift = true;
                             break;
                         case 'x':
                             tiles[i, j] = new Destination();
