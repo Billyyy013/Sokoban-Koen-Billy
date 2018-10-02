@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Sokoban_M3.Model.Chest">
-    <Position X="9.5" Y="5.75" Width="1.5" />
+    <Position X="6.75" Y="6.25" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Entity" FixedFromPoint="true">
       <Path>
-        <Point X="8.25" Y="7.042" />
-        <Point X="9.5" Y="7.042" />
+        <Point X="9.5" Y="6.688" />
+        <Point X="8.25" Y="6.688" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
@@ -24,7 +24,9 @@
     <Position X="11.75" Y="1.75" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11" Y="2.125" />
+        <Point X="11" Y="2.117" />
+        <Point X="11.375" Y="2.117" />
+        <Point X="11.375" Y="2.125" />
         <Point X="11.75" Y="2.125" />
       </Path>
     </InheritanceLine>
@@ -57,12 +59,15 @@
       <HashCode>EAAAACAAEAAAAAAAAAAAAAAAAJAAAAAACACAAAAACAA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Entity" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban_M3.Model.Wall" Collapsed="true">
     <Position X="11.75" Y="3.75" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11" Y="4.062" />
+        <Point X="11" Y="3.928" />
         <Point X="11.154" Y="4.062" />
         <Point X="11.75" Y="4.062" />
       </Path>
@@ -123,8 +128,8 @@
     <Position X="11.75" Y="4.75" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Tile" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="11" Y="4.711" />
-        <Point X="11.375" Y="4.711" />
+        <Point X="11" Y="4.535" />
+        <Point X="11.375" Y="4.535" />
         <Point X="11.375" Y="5.062" />
         <Point X="11.75" Y="5.062" />
       </Path>
@@ -160,7 +165,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Entity">
-    <Position X="6.75" Y="6.25" Width="1.5" />
+    <Position X="9.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABAAACAA=</HashCode>
       <FileName>Model\Entity.cs</FileName>
