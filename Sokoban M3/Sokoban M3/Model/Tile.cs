@@ -16,10 +16,7 @@ namespace Sokoban_M3.Model
         public Tile Left { get; set;}
         public Tile Right { get; set;}
 
-        public Forklift Forklift { get; set; }
-        public Chest Chest { get; set; }
-
-        public abstract bool PutForkliftOnThisField(Tile current ,Tile next);
-        public abstract bool PutChestOnThisField(Chest chest);
+        public Entity Entity { get; set; }
+        public abstract bool PutEntityOnThisField(Maze maze, Tile previous, Tile next);
     }
 }

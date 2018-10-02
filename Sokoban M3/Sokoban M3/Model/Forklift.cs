@@ -11,6 +11,9 @@ namespace Sokoban_M3.Model
         public Forklift()
         {
             Symbol = '@';
+            SymbolOnDestination = '@';
         }
+
+        public override void ArrivedOnDestination(Maze maze, int value) { return; }
     }
 }

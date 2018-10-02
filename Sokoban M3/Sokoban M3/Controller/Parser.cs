@@ -54,15 +54,15 @@ namespace Sokoban_M3.Controller
                             break;
                         case '@':
                             tiles[i, j] = new Floor();
+                            tiles[i, j].Entity = new Model.Forklift();
                             Maze.Current = tiles[i, j];
-                            Maze.Current.Forklift = new Model.Forklift();
                             break;
                         case 'x':
                             tiles[i, j] = new Destination();
                             break;
                         case 'o':
                             tiles[i, j] = new Floor();
-                            tiles[i, j].PutChestOnThisField(new Chest());
+                            tiles[i, j].Entity = new Chest();
                             Maze.AmountOfChests++;
                             break;
                     }

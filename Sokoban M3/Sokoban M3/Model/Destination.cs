@@ -12,13 +12,9 @@ namespace Sokoban_M3.Model
         {
             get
             {
-                if (Forklift != null)
+                if (Entity != null)
                 {
-                    return Forklift.Symbol;
-                }
-                else if (Chest != null)
-                {
-                    return Chest.SymbolOnDestination;
+                    return Entity.SymbolOnDestination;
                 }
                 else
                 {
@@ -32,31 +28,23 @@ namespace Sokoban_M3.Model
             _symbol = 'x';
         }
 
-        public override bool PutChestOnThisField(Chest chest)
+        public override bool PutEntityOnThisField(Maze maze, Tile previous, Tile next)
         {
-            if (Chest == null)
+            if (Entity == null)
             {
-                this.Chest = chest;
-                return true;
-            }
-            return false;
-        }
-
-        public override bool PutForkliftOnThisField(Tile current, Tile next)
-        {
-            if (Chest == null)
-            {
-                this.Forklift = current.Forklift;
-                current.Forklift = null;
+                Entity = previous.Entity;
+                previous.Entity = null;
+                Entity.ArrivedOnDestination(maze, 1);
                 return true;
             }
             else
             {
-                if (next.PutChestOnThisField(this.Chest))
+                if (next.Entity != null) { return false; }
+                if (next.PutEntityOnThisField(maze, this, next))
                 {
-                    this.Chest = null;
-                    this.Forklift = current.Forklift;
-                    current.Forklift = null;
+                    Entity = previous.Entity;
+                    previous.Entity = null;
+                    Entity.ArrivedOnDestination(maze, 1);
                     return true;
                 }
                 return false;

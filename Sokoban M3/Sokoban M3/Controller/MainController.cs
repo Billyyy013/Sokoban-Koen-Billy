@@ -39,34 +39,30 @@ namespace Sokoban_M3.Controller
                     {
                         case ConsoleKey.UpArrow:
                             if (currentTile.Above.Above == null) { break; }
-                            if (Maze.Current.Above.PutForkliftOnThisField(Maze.Current, Maze.Current.Above.Above))
+                            if (Maze.Current.Above.PutEntityOnThisField(Maze, Maze.Current, Maze.Current.Above.Above))
                             {
                                 Maze.Current = Maze.Current.Above;
-                                Maze.CountChestsOnDestiation();
                             }
                             break;
                         case ConsoleKey.DownArrow:
                             if (currentTile.Below.Below == null) { break; }
-                            if (Maze.Current.Below.PutForkliftOnThisField(Maze.Current, Maze.Current.Below.Below))
+                            if (Maze.Current.Below.PutEntityOnThisField(Maze, Maze.Current, Maze.Current.Below.Below))
                             {
                                 Maze.Current = Maze.Current.Below;
-                                Maze.CountChestsOnDestiation();
                             }
                             break;
                         case ConsoleKey.LeftArrow:
                             if (currentTile.Left.Left == null) { break; }
-                            if (Maze.Current.Left.PutForkliftOnThisField(Maze.Current, Maze.Current.Left.Left))
+                            if (Maze.Current.Left.PutEntityOnThisField(Maze, Maze.Current, Maze.Current.Left.Left))
                             {
                                 Maze.Current = Maze.Current.Left;
-                                Maze.CountChestsOnDestiation();
                             }
                             break;
                         case ConsoleKey.RightArrow:
                             if (currentTile.Right.Right == null) { break; }
-                            if (Maze.Current.Right.PutForkliftOnThisField(Maze.Current, Maze.Current.Right.Right))
+                            if (Maze.Current.Right.PutEntityOnThisField(Maze, Maze.Current, Maze.Current.Right.Right))
                             {
                                 Maze.Current = Maze.Current.Right;
-                                Maze.CountChestsOnDestiation();
                             }
                             break;
                     }

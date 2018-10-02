@@ -14,10 +14,10 @@ namespace Sokoban_M3.Model
             Symbol = ' ';
         }
 
-        //You can't put a chest on an empty tile as such this methode will return false when used
-        public override bool PutChestOnThisField(Chest chest) { return false; }
-
-        //You can't put a forklift on an empty tile as such this methode will return false when used
-        public override bool PutForkliftOnThisField(Tile current, Tile next) { return false; }
+        //You can't put an Entity on an EmptyTile as such this methode will return false when used
+        public override bool PutEntityOnThisField(Maze maze, Tile previous, Tile next)
+        {
+            return false;
+        }
     }
 }

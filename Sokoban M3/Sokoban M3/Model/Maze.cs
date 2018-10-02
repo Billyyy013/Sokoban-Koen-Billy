@@ -17,23 +17,5 @@ namespace Sokoban_M3.Model
         public Maze()
         {
         }
-
-        public void CountChestsOnDestiation()
-        {
-            int count = 0;
-            Model.Tile horizontal = First;
-            Model.Tile vertical = First;
-            while (vertical != null)
-            {
-                while (horizontal != null)
-                {
-                    if (horizontal.Symbol.Equals('0')) { count++; }
-                    horizontal = horizontal.Right;
-                }
-                vertical = vertical.Below;
-                horizontal = vertical;
-            }
-            AmountOfChestsOnDestination = count;
-        }
     }
 }
