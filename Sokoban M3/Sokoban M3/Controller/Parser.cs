@@ -65,6 +65,9 @@ namespace Sokoban_M3.Controller
                             tiles[i, j].Entity = new Chest();
                             Maze.AmountOfChests++;
                             break;
+                        case '~':
+                            tiles[i, j] = new Pitfall();
+                            break;
                     }
                     if (Maze.First == null)
                     {
