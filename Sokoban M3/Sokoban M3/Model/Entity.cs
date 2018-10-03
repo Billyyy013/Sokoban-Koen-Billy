@@ -12,5 +12,7 @@ namespace Sokoban_M3.Model
         public char SymbolOnDestination { get; set; }
 
         public abstract void ArrivedOnDestination(Maze maze, int value);
+
+        public abstract void StepOnPitFall(Tile current);
     }
 }

@@ -4,14 +4,14 @@
     <Position X="7.5" Y="6.25" Width="1.5" />
     <InheritanceLine Type="Sokoban_M3.Model.Entity" FixedFromPoint="true">
       <Path>
-        <Point X="7.5" Y="5.747" />
-        <Point X="7.5" Y="5.95" />
-        <Point X="8.25" Y="5.95" />
+        <Point X="7.5" Y="5.939" />
+        <Point X="7.5" Y="6.096" />
+        <Point X="8.25" Y="6.096" />
         <Point X="8.25" Y="6.25" />
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\Chest.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -40,7 +40,7 @@
   <Class Name="Sokoban_M3.Model.Forklift">
     <Position X="5.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\Forklift.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -174,14 +174,14 @@
   <Class Name="Sokoban_M3.Model.Entity">
     <Position X="6.75" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABAAACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAABAAECAA=</HashCode>
       <FileName>Model\Entity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Pitfall">
     <Position X="9.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAA=</HashCode>
       <FileName>Model\Pitfall.cs</FileName>
     </TypeIdentifier>
   </Class>

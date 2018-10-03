@@ -23,6 +23,9 @@ namespace Sokoban_M3.Model
             }
             set { }
         }
+
+        private int _counter { get; set; }
+
         public Pitfall()
         {
             _symbol = '~';
@@ -33,6 +36,9 @@ namespace Sokoban_M3.Model
             {
                 Entity = previous.Entity;
                 previous.Entity = null;
+                _counter++;
+                if (_counter == 3) { _symbol = ' '; }
+                if (_counter > 3) { Entity.StepOnPitFall(this); }
                 return true;
             }
             else
@@ -42,6 +48,8 @@ namespace Sokoban_M3.Model
                 {
                     Entity = previous.Entity;
                     previous.Entity = null;
+                    _counter++;
+                    if (_counter == 3) { _symbol = ' '; }
                     return true;
                 }
                 return false;

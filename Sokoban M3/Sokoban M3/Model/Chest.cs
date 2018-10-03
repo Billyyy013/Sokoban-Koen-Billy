@@ -25,5 +25,10 @@ namespace Sokoban_M3.Model
                 maze.AmountOfChestsOnDestination--;
             }   
         }
+
+        public override void StepOnPitFall(Tile current)
+        {
+            current.Entity = null;
+        }
     }
 }
