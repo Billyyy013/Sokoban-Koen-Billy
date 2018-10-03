@@ -44,7 +44,7 @@ namespace Sokoban_M3.Model
                 {
                     Entity = previous.Entity;
                     previous.Entity = null;
-                    Entity.ArrivedOnDestination(maze, 1);
+                    maze.AmountOfChestsOnDestination--;
                     return true;
                 }
                 return false;
