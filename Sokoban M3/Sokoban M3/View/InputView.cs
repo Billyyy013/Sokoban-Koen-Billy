@@ -15,8 +15,30 @@ namespace Sokoban_M3.View
 
         public int RetrieveMazeNumber()
         {
-            int intTemp = Convert.ToInt32(Console.ReadLine());
+            int intTemp;
+            while (true)
+            {
+                string s = Console.ReadLine();
+                if (int.TryParse(s, out intTemp))
+                {
 
+                    intTemp = Convert.ToInt32(s);
+                    if (intTemp > 0 && intTemp < 7)
+                    {
+                        Console.WriteLine("Succes");
+                        break;
+                    } 
+
+                }
+                if (s.Equals("s"))
+                {
+                    Environment.Exit(0);
+                }
+                else
+                {
+                    Console.WriteLine("Ongeldige input");
+                }
+            }
             return intTemp;
         }
 
