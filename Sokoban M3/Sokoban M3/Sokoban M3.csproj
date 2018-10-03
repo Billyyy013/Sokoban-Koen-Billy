@@ -55,6 +55,7 @@
     <Compile Include="Model\Pitfall.cs" />
     <Compile Include="Model\Tile.cs" />
     <Compile Include="Model\Wall.cs" />
+    <Compile Include="Model\Worker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View\InputView.cs" />

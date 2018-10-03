@@ -68,6 +68,10 @@ namespace Sokoban_M3.Controller
                         case '~':
                             tiles[i, j] = new Pitfall();
                             break;
+                        case '$':
+                            tiles[i, j] = new Floor();
+                            tiles[i, j].Entity = new Worker();
+                            break;
                     }
                     if (Maze.First == null)
                     {
