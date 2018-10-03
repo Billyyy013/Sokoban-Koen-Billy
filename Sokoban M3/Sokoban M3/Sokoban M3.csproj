@@ -76,6 +76,8 @@
     <Content Include="Mazes\doolhof4.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Mazes\doolhof5.txt" />
+    <Content Include="Mazes\doolhof6.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
