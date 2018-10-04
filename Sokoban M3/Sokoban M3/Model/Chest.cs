@@ -26,6 +26,8 @@ namespace Sokoban_M3.Model
             }   
         }
 
+        public override void Move(Maze maze) { return; }
+
         public override void StepOnPitFall(Tile current)
         {
             current.Entity = null;

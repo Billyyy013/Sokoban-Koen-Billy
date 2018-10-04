@@ -32,40 +32,41 @@ namespace Sokoban_M3.Controller
             while (Maze.AmountOfChests != Maze.AmountOfChestsOnDestination)
             {
                 ConsoleKey key = Console.ReadKey().Key;
-                Model.Tile currentTile = Maze.Current;
+                Model.Tile currentTile = Maze.CurrentForkLift;
                 if (key == ConsoleKey.UpArrow || key == ConsoleKey.DownArrow || key == ConsoleKey.LeftArrow || key == ConsoleKey.RightArrow)
                 {
                     switch (key)
                     {
                         case ConsoleKey.UpArrow:
                             if (currentTile.Above.Above == null) { break; }
-                            if (Maze.Current.Above.PutEntityOnThisField(Maze, Maze.Current, Maze.Current.Above.Above))
+                            if (Maze.CurrentForkLift.Above.PutEntityOnThisField(Maze, Maze.CurrentForkLift, Maze.CurrentForkLift.Above.Above))
                             {
-                                Maze.Current = Maze.Current.Above;
+                                Maze.CurrentForkLift = Maze.CurrentForkLift.Above;
                             }
                             break;
                         case ConsoleKey.DownArrow:
                             if (currentTile.Below.Below == null) { break; }
-                            if (Maze.Current.Below.PutEntityOnThisField(Maze, Maze.Current, Maze.Current.Below.Below))
+                            if (Maze.CurrentForkLift.Below.PutEntityOnThisField(Maze, Maze.CurrentForkLift, Maze.CurrentForkLift.Below.Below))
                             {
-                                Maze.Current = Maze.Current.Below;
+                                Maze.CurrentForkLift = Maze.CurrentForkLift.Below;
                             }
                             break;
                         case ConsoleKey.LeftArrow:
                             if (currentTile.Left.Left == null) { break; }
-                            if (Maze.Current.Left.PutEntityOnThisField(Maze, Maze.Current, Maze.Current.Left.Left))
+                            if (Maze.CurrentForkLift.Left.PutEntityOnThisField(Maze, Maze.CurrentForkLift, Maze.CurrentForkLift.Left.Left))
                             {
-                                Maze.Current = Maze.Current.Left;
+                                Maze.CurrentForkLift = Maze.CurrentForkLift.Left;
                             }
                             break;
                         case ConsoleKey.RightArrow:
                             if (currentTile.Right.Right == null) { break; }
-                            if (Maze.Current.Right.PutEntityOnThisField(Maze, Maze.Current, Maze.Current.Right.Right))
+                            if (Maze.CurrentForkLift.Right.PutEntityOnThisField(Maze, Maze.CurrentForkLift, Maze.CurrentForkLift.Right.Right))
                             {
-                                Maze.Current = Maze.Current.Right;
+                                Maze.CurrentForkLift = Maze.CurrentForkLift.Right;
                             }
                             break;
                     }
+                    Maze.CurrentWorker.Entity.Move(Maze);
                     outputView.PrintMaze(Maze.First);
                 }
                 else

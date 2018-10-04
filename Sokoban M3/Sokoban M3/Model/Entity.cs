@@ -14,5 +14,7 @@ namespace Sokoban_M3.Model
         public abstract void ArrivedOnDestination(Maze maze, int value);
 
         public abstract void StepOnPitFall(Tile current);
+
+        public abstract void Move(Maze maze);
     }
 }

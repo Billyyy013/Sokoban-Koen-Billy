@@ -55,7 +55,7 @@ namespace Sokoban_M3.Controller
                         case '@':
                             tiles[i, j] = new Floor();
                             tiles[i, j].Entity = new Model.Forklift();
-                            Maze.Current = tiles[i, j];
+                            Maze.CurrentForkLift = tiles[i, j];
                             break;
                         case 'x':
                             tiles[i, j] = new Destination();
@@ -71,6 +71,7 @@ namespace Sokoban_M3.Controller
                         case '$':
                             tiles[i, j] = new Floor();
                             tiles[i, j].Entity = new Worker();
+                            Maze.CurrentWorker = tiles[i, j];
                             break;
                     }
                     if (Maze.First == null)

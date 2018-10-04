@@ -21,22 +21,72 @@ namespace Sokoban_M3.Model
 
         public override void StepOnPitFall(Tile current) { return; }
 
-        public bool CheckIfAwake()
+        private bool CheckIfAwake()
         {
-            int chance = randomGen.Next(1, 100);
+            int chance;
             if (Awake)
             {
                 chance = randomGen.Next(1, 100);
                 if(chance > 0 && chance < 26)
                 {
                     Awake = false;
+                    Symbol = 'z';
+                    SymbolOnDestination = 'z';
+                    return Awake;
                 }
             }
+            chance = randomGen.Next(1,100);
             if (chance > 0 && chance < 11)
             {
                 Awake = true;
+                Symbol = '$';
+                SymbolOnDestination = '$';
             }
             return Awake;
+        }
+
+        public override void Move(Maze maze)
+        {
+            if (!CheckIfAwake())
+            {
+                return;
+            }
+            Tile[] tiles = ReturnRandomDestination(maze);
+            if (tiles[1] == null) { return; }
+            if (tiles[0].PutEntityOnThisField(maze, maze.CurrentWorker, tiles[1]))
+            {
+                maze.CurrentWorker = tiles[0];
+            }
+        }
+
+        public Tile[] ReturnRandomDestination(Maze maze)
+        {
+            int number = randomGen.Next(1, 100);
+            Tile[] tiles = new Tile[2];
+            if (number > 0 && number < 26)
+            {
+                tiles[0] = maze.CurrentWorker.Above;
+                tiles[1] = maze.CurrentWorker.Above.Above;
+                return tiles;
+            }
+            else if (number > 25 && number < 51)
+            {
+                tiles[0] = maze.CurrentWorker.Left;
+                tiles[1] = maze.CurrentWorker.Left.Left;
+                return tiles;
+            }
+            else if (number > 50 && number < 76)
+            {
+                tiles[0] = maze.CurrentWorker.Below;
+                tiles[1] = maze.CurrentWorker.Below.Below;
+                return tiles;
+            }
+            else
+            {
+                tiles[0] = maze.CurrentWorker.Right;
+                tiles[1] = maze.CurrentWorker.Right.Right;
+                return tiles;
+            }
         }
     }
 }
