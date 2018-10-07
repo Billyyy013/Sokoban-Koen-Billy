@@ -12,6 +12,8 @@ namespace Sokoban_M3.Model
         {
             Symbol = 'O';
             SymbolOnDestination = '0';
+            Movable = true;
+            Awake = true;
         }
 
         public override void ArrivedOnDestination(Maze maze, int value)
@@ -26,7 +28,7 @@ namespace Sokoban_M3.Model
             }   
         }
 
-        public override void Move(Maze maze) { return; }
+        public override bool Move(Maze maze, Tile moveTo) { return false; }
 
         public override void StepOnPitFall(Tile current)
         {

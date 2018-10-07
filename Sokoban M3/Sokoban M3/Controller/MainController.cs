@@ -31,7 +31,7 @@ namespace Sokoban_M3.Controller
 
             while (Maze.AmountOfChests != Maze.AmountOfChestsOnDestination)
             {
-                ConsoleKey key = Console.ReadKey().Key;
+                ConsoleKey key = inputView.RetrieveConsoleKey();
                 Model.Tile currentTile = Maze.CurrentForkLift;
                 if (key == ConsoleKey.UpArrow || key == ConsoleKey.DownArrow || key == ConsoleKey.LeftArrow || key == ConsoleKey.RightArrow)
                 {
@@ -66,7 +66,7 @@ namespace Sokoban_M3.Controller
                             }
                             break;
                     }
-                    Maze.CurrentWorker.Entity.Move(Maze);
+                    if (Maze.CurrentWorker!= null) { Maze.CurrentWorker.Entity.Move(Maze, Maze.CurrentWorker); }
                     outputView.PrintMaze(Maze.First);
                 }
                 else

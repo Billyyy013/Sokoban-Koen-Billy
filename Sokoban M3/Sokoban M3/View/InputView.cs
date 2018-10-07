@@ -47,6 +47,12 @@ namespace Sokoban_M3.View
             Console.WriteLine("Gebruik de pijltjes toetsen.");
         }
 
+        public ConsoleKey RetrieveConsoleKey()
+        {
+            ConsoleKey key = Console.ReadKey().Key;
+            return key;
+        }
+
         public void InvalidInputMessage()
         {
             Console.WriteLine("Geen valide input probeer opnieuw");

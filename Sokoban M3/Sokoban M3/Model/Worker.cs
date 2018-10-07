@@ -9,12 +9,27 @@ namespace Sokoban_M3.Model
     class Worker : Entity
     {
         private Random randomGen;
-        private bool Awake { get; set; }
+        public override char Symbol
+        {
+            get
+            {
+                if (Awake == true)
+                {
+                    return '$';
+                }
+                else
+                {
+                    return 'z';
+                }
+            }
+            set { }
+        }
         public Worker()
         {
             Symbol = '$';
             SymbolOnDestination = '$';
-
+            Movable = false;
+            Awake = true;
             randomGen = new Random();
         }
         public override void ArrivedOnDestination(Maze maze, int value) { return; }
@@ -41,22 +56,24 @@ namespace Sokoban_M3.Model
                 Awake = true;
                 Symbol = '$';
                 SymbolOnDestination = '$';
+                return Awake;
             }
             return Awake;
         }
 
-        public override void Move(Maze maze)
+        public override bool Move(Maze maze, Tile moveTo)
         {
             if (!CheckIfAwake())
             {
-                return;
+                return false;
             }
             Tile[] tiles = ReturnRandomDestination(maze);
-            if (tiles[1] == null) { return; }
+            if (tiles[1] == null) { return false; }
             if (tiles[0].PutEntityOnThisField(maze, maze.CurrentWorker, tiles[1]))
             {
                 maze.CurrentWorker = tiles[0];
             }
+            return false;
         }
 
         public Tile[] ReturnRandomDestination(Maze maze)

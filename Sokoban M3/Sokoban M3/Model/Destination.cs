@@ -40,6 +40,11 @@ namespace Sokoban_M3.Model
             else
             {
                 if (next.Entity != null) { return false; }
+                if (!this.Entity.Movable)
+                {
+                    this.Entity.Awake = true;
+                    return false;
+                }
                 if (next.PutEntityOnThisField(maze, this, next))
                 {
                     Entity = previous.Entity;
