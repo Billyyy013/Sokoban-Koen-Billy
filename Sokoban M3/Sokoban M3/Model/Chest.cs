@@ -28,7 +28,7 @@ namespace Sokoban_M3.Model
             }   
         }
 
-        public override bool Move(Maze maze, Tile moveTo) { return false; }
+        public override void Move(Maze maze) { return; }
 
         public override void StepOnPitFall(Tile current)
         {

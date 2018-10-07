@@ -61,19 +61,19 @@ namespace Sokoban_M3.Model
             return Awake;
         }
 
-        public override bool Move(Maze maze, Tile moveTo)
+        public override void Move(Maze maze)
         {
             if (!CheckIfAwake())
             {
-                return false;
+                return;
             }
             Tile[] tiles = ReturnRandomDestination(maze);
-            if (tiles[1] == null) { return false; }
+            if (tiles[1] == null) { return; }
             if (tiles[0].PutEntityOnThisField(maze, maze.CurrentWorker, tiles[1]))
             {
                 maze.CurrentWorker = tiles[0];
             }
-            return false;
+            return;
         }
 
         public Tile[] ReturnRandomDestination(Maze maze)

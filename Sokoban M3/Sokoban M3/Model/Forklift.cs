@@ -18,13 +18,7 @@ namespace Sokoban_M3.Model
 
         public override void ArrivedOnDestination(Maze maze, int value) { return; }
 
-        public override bool Move(Maze maze, Tile moveTo)
-        {
-            moveTo.Entity = maze.CurrentForkLift.Entity;
-            maze.CurrentForkLift.Entity = null;
-            maze.CurrentForkLift = moveTo;
-            return true;
-        }
+        public override void Move(Maze maze){ return; }
 
         public override void StepOnPitFall(Tile current) { return; }
     }
