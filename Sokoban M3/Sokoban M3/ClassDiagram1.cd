@@ -99,45 +99,26 @@
       <FileName>Model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban_M3.Controller.MainController">
+  <Class Name="Sokoban_M3.Process.MainController">
     <Position X="4.25" Y="2" Width="1.5" />
-    <AssociationLine Name="outputView" Type="Sokoban_M3.View.OutputView" FixedFromPoint="true">
-      <Path>
-        <Point X="4.25" Y="2.438" />
-        <Point X="2.75" Y="2.438" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="inputView" Type="Sokoban_M3.View.InputView" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="4.25" Y="3.063" />
-        <Point X="3.583" Y="3.063" />
-        <Point X="3.583" Y="5.348" />
-        <Point X="2.75" Y="5.348" />
-      </Path>
-    </AssociationLine>
     <AssociationLine Name="Maze" Type="Sokoban_M3.Model.Maze" FixedToPoint="true">
       <Path>
         <Point X="5.75" Y="2.481" />
+        <Point X="6.417" Y="2.481" Type="JumpStart" />
+        <Point X="6.583" Y="2.481" Type="JumpEnd" />
         <Point X="6.75" Y="2.481" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAABAAQAAAAAAAIAIAA=</HashCode>
-      <FileName>Controller\MainController.cs</FileName>
+      <FileName>Process\MainController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="parser" />
       <Field Name="outputView" />
       <Field Name="inputView" />
-      <Field Name="parser" />
       <Property Name="Maze" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="Sokoban_M3.View.OutputView">
-    <Position X="1.25" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAEAAABAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
-      <FileName>View\OutputView.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Program">
     <Position X="1.25" Y="0.5" Width="1.5" />
@@ -161,7 +142,7 @@
       <FileName>Model\EmptyTile.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban_M3.Controller.Parser">
+  <Class Name="Sokoban_M3.Process.Parser">
     <Position X="4.25" Y="4.5" Width="1.5" />
     <AssociationLine Name="Maze" Type="Sokoban_M3.Model.Maze" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
@@ -173,18 +154,11 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIAAAA=</HashCode>
-      <FileName>Controller\Parser.cs</FileName>
+      <FileName>Process\Parser.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Maze" />
     </ShowAsAssociation>
-  </Class>
-  <Class Name="Sokoban_M3.View.InputView">
-    <Position X="1.25" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAEAAABAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgAAAA=</HashCode>
-      <FileName>View\InputView.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="Sokoban_M3.Model.Entity">
     <Position X="6.75" Y="4.75" Width="1.5" />
@@ -205,6 +179,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAgAAEAAAAAAAAAAAAAABAAAAAABAECAA=</HashCode>
       <FileName>Model\Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban_M3.Presentation.OutputView" Collapsed="true">
+    <Position X="7.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAABAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\OutputView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban_M3.Presentation.InputView" Collapsed="true">
+    <Position X="8" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAABAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgAAAA=</HashCode>
+      <FileName>Presentation\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

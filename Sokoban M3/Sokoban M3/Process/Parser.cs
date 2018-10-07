@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Sokoban_M3.Model;
 
-namespace Sokoban_M3.Controller
+namespace Sokoban_M3.Process
 {
     class Parser
     {

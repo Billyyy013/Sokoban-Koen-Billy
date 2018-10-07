@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sokoban_M3.View
+namespace Sokoban_M3.Presentation
 {
     class InputView
     {

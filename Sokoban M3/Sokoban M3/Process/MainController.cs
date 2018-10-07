@@ -5,18 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Sokoban_M3.Controller
+namespace Sokoban_M3.Process
 {
     class MainController
     {
-        private View.OutputView outputView;
-        private View.InputView inputView;
+        private Presentation.OutputView outputView;
+        private Presentation.InputView inputView;
         private Parser parser;
         public Model.Maze Maze { get; set; }
         public MainController()
         {
-            outputView = new View.OutputView();
-            inputView = new View.InputView();
+            outputView = new Presentation.OutputView();
+            inputView = new Presentation.InputView();
             parser = new Parser();
             parser.BuildMaze(inputView.RetrieveMazeNumber());
             Maze = parser.Maze;
@@ -66,7 +66,7 @@ namespace Sokoban_M3.Controller
                             }
                             break;
                     }
-                    if (Maze.CurrentWorker!= null) { Maze.CurrentWorker.Entity.Move(Maze, Maze.CurrentWorker); }
+                    if (Maze.CurrentWorker!= null) { Maze.CurrentWorker.Entity.Move(Maze); }
                     outputView.PrintMaze(Maze.First);
                 }
                 else

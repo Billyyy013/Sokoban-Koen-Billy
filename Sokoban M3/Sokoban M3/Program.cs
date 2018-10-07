@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Sokoban_M3.View;
+using Sokoban_M3.Presentation;
 
 namespace Sokoban_M3
 {
@@ -12,7 +12,7 @@ namespace Sokoban_M3
 
         static void Main(string[] args)
         {
-            Controller.MainController mc = new Controller.MainController();
+            Process.MainController mc = new Process.MainController();
         }
     }
 }
