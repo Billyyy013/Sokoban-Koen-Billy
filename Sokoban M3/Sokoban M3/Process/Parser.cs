@@ -12,7 +12,7 @@ namespace Sokoban_M3.Process
         {
         }
 
-        public void BuildMaze(int mazeNumber)
+        public void BuildMaze(int maze  Number)
         {
 
             string _filePath = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory);
@@ -32,7 +32,7 @@ namespace Sokoban_M3.Process
 
             char[] characters = list[0].ToArray();
             Maze = new Maze();
-            Model.Tile[,] tiles = new Model.Tile[list.Count, characters.Length];
+                Model.Tile[,] tiles = new Model.Tile[list.Count, characters.Length];
             for (int i = 0; i < list.Count; i++)
             {
                 characters = list[i].ToArray();
